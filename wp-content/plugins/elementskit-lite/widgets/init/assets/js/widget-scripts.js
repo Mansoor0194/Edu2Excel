@@ -1146,7 +1146,7 @@
                                     getSelectorFromElement: function(e) {
                                         var i = e.getAttribute("data-target");
                                         i && "#" !== i || (i = e.getAttribute("href") || ""), "#" === i.charAt(0) && (i = function(e) {
-                                            return "function" == typeof t.escapeSelector ? t.escapeSelector(e).substr(1) : e.replace(/(:|\.|\[|\]|,|=|@)/g, "\\$1")
+                                            return "function" == typeof t.EscapeSelector ? t.EscapeSelector(e).substr(1) : e.replace(/(:|\.|\[|\]|,|=|@)/g, "\\$1")
                                         }(i));
                                         try {
                                             return t(document).find(i).length > 0 ? i : null

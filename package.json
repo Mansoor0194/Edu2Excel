@@ -1,7 +1,7 @@
 {
   "name": "imigo---copy",
   "version": "1.0.0",
-  "description": "",
+  "dEscription": "",
   "main": "index.js",
   "dependencies": {
     "boolbase": "^1.0.0",

@@ -26,13 +26,13 @@ for html_file in html_files:
     rel_path = os.path.relpath(html_file, workspace_dir)
     if match:
         footer_html = match.group(1)
-        # Find some key texts like the description, headers, and copyright
-        desc_match = re.search(r'<p>(Your Global Journey Starts Here.*?)</p>', footer_html, re.IGNORECASE)
+        # Find some key texts like the dEscription, headers, and copyright
+        dEsc_match = re.search(r'<p>(Your Global Journey Starts Here.*?)</p>', footer_html, re.IGNORECASE)
         copyright_match = re.search(r'<p>(Copyright.*?)</p>', footer_html, re.IGNORECASE)
-        desc_text = desc_match.group(1) if desc_match else "NOT FOUND"
+        dEsc_text = dEsc_match.group(1) if dEsc_match else "NOT FOUND"
         copyright_text = copyright_match.group(1) if copyright_match else "NOT FOUND"
         print(f"{rel_path}:")
-        print(f"  Description: {desc_text}")
+        print(f"  DEscription: {dEsc_text}")
         print(f"  Copyright: {copyright_text}")
     else:
         print(f"{rel_path}: FOOTER CONTENT CONTAINER NOT FOUND")

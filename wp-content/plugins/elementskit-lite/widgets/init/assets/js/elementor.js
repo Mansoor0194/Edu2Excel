@@ -77,14 +77,14 @@
         } catch (t) {
             return !1
         }
-    }, ElementsKit_Helper.escapeHtml = function(e) {
+    }, ElementsKit_Helper.EscapeHtml = function(e) {
         return e.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;")
     };
     let n = {
         init: function() {
             var i = {
                 "elementskit-accordion.default": n.Accordion,
-                "elementskit-blog-posts.default": n.BlogPosts,
+                "elementskit-Esc-posts.default": n.EscPosts,
                 "elementskit-countdown-timer.default": n.Countdown_Timer,
                 "elementskit-client-logo.default": n.Client_Logo,
                 "elementskit-testimonial.default": n.Testimonial_Slider,
@@ -218,7 +218,7 @@
                 }).update(o)
             }))
         },
-        BlogPosts: function(e) {
+        EscPosts: function(e) {
             var t = e.find(".post-items");
             t.data("masonry-config") && t.imagesLoaded((function() {
                 t.masonry()
@@ -230,7 +230,7 @@
                 o = "elementskit-inner-container ekit-countdown-inner",
                 s = "elementskit-inner-container",
                 a = "elementskit-timer-content ekit-countdown-inner";
-            for (let e in i) i.hasOwnProperty(e) && "string" == typeof i[e] && (i[e] = ElementsKit_Helper.escapeHtml(i[e]));
+            for (let e in i) i.hasOwnProperty(e) && "string" == typeof i[e] && (i[e] = ElementsKit_Helper.EscapeHtml(i[e]));
             if (n.length) {
                 switch (n[0].classList[0]) {
                     case "elementskit-countdown-timer":
@@ -253,7 +253,7 @@
                     t = ["elementskit-wks", "elementskit-days", "elementskit-hrs", "elementskit-mins", "elementskit-secs"],
                     n = "";
                 e.forEach((function(e, i) {
-                    const o = ElementsKit_Helper.escapeHtml(e);
+                    const o = ElementsKit_Helper.EscapeHtml(e);
                     n += '<div class="elementskit-time ' + t[i] + ' ekit-countdown-inner"><span class="elementskit-count elementskit-curr elementskit-top"></span><span class="elementskit-count elementskit-next elementskit-top"></span><span class="elementskit-count elementskit-next elementskit-bottom"></span><span class="elementskit-count elementskit-curr elementskit-bottom"></span><span class="elementskit-label">' + o + "</span></div>"
                 })), l.html(n);
                 let i = l.children(".elementskit-mins"),
@@ -276,7 +276,7 @@
                 l.theFinalCountdown(r.ekitCountdown, (function(e) {
                     m(c.s, e.offset.seconds, o), m(c.m, e.offset.minutes, i), m(c.h, e.offset.hours, s), m(c.d, e.offset.days, a), m(c.w, e.offset.weeks, d), c.s = e.offset.seconds, c.m = e.offset.minutes, c.h = e.offset.hours, c.d = e.offset.days, c.w = e.offset.weeks
                 })).on("finish.countdown", (function() {
-                    this.innerHTML = ElementsKit_Helper.escapeHtml(r.finishTitle) + "<br/>" + ElementsKit_Helper.escapeHtml(r.finishContent)
+                    this.innerHTML = ElementsKit_Helper.EscapeHtml(r.finishTitle) + "<br/>" + ElementsKit_Helper.EscapeHtml(r.finishContent)
                 }))
             }
         },
@@ -321,7 +321,7 @@
         Image_Comparison: function(e) {
             var t = e.find(".elementskit-image-comparison"),
                 n = t.data();
-            for (let e in n) n.hasOwnProperty(e) && "string" == typeof n[e] && (n[e] = ElementsKit_Helper.escapeHtml(n[e]));
+            for (let e in n) n.hasOwnProperty(e) && "string" == typeof n[e] && (n[e] = ElementsKit_Helper.EscapeHtml(n[e]));
             t.imagesLoaded((function() {
                 var e = {
                     orientation: t.hasClass("image-comparison-container-vertical") ? "vertical" : "horizontal",

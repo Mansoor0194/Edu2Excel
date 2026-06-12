@@ -88,7 +88,7 @@
             P = ~R.indexOf("words"),
             q = ~R.indexOf("chars"),
             G = o(e),
-            I = e.linesClass,
+            I = e.linEsclass,
             J = ~(I || "").indexOf("++"),
             K = [],
             Q = "flex" === y.display,

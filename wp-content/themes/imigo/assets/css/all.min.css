@@ -548,7 +548,7 @@
     content: "\e4c2"
 }
 
-.fa-sort-desc:before,
+.fa-sort-dEsc:before,
 .fa-sort-down:before {
     content: "\f0dd"
 }
@@ -803,7 +803,7 @@
     content: "\e571"
 }
 
-.fa-blog:before {
+.fa-Esc:before {
     content: "\f781"
 }
 
@@ -840,7 +840,7 @@
 }
 
 .fa-arrow-down-9-1:before,
-.fa-sort-numeric-desc:before,
+.fa-sort-numeric-dEsc:before,
 .fa-sort-numeric-down-alt:before {
     content: "\f886"
 }
@@ -993,7 +993,7 @@
     content: "\f3e5"
 }
 
-.fa-star-and-crescent:before {
+.fa-star-and-crEscent:before {
     content: "\f699"
 }
 
@@ -1031,7 +1031,7 @@
     content: "\f5c3"
 }
 
-.fa-prescription-bottle:before {
+.fa-prEscription-bottle:before {
     content: "\f485"
 }
 
@@ -1328,7 +1328,7 @@
 }
 
 .fa-arrow-down-z-a:before,
-.fa-sort-alpha-desc:before,
+.fa-sort-alpha-dEsc:before,
 .fa-sort-alpha-down-alt:before {
     content: "\f881"
 }
@@ -1481,7 +1481,7 @@
 
 .fa-rod-asclepius:before,
 .fa-rod-snake:before,
-.fa-staff-aesculapius:before,
+.fa-staff-aEsculapius:before,
 .fa-staff-snake:before {
     content: "\e579"
 }
@@ -1941,7 +1941,7 @@
     content: "\e59a"
 }
 
-.fa-file-prescription:before {
+.fa-file-prEscription:before {
     content: "\f572"
 }
 
@@ -3504,7 +3504,7 @@
     content: "\f5b3"
 }
 
-.fa-audio-description:before {
+.fa-audio-dEscription:before {
     content: "\f29e"
 }
 
@@ -3560,7 +3560,7 @@
     content: "\f119"
 }
 
-.fa-prescription:before {
+.fa-prEscription:before {
     content: "\f5b1"
 }
 
@@ -4055,8 +4055,8 @@
     content: "\f2a1"
 }
 
-.fa-prescription-bottle-alt:before,
-.fa-prescription-bottle-medical:before {
+.fa-prEscription-bottle-alt:before,
+.fa-prEscription-bottle-medical:before {
     content: "\f486"
 }
 
@@ -4765,7 +4765,7 @@
 }
 
 .fa-arrow-down-short-wide:before,
-.fa-sort-amount-desc:before,
+.fa-sort-amount-dEsc:before,
 .fa-sort-amount-down-alt:before {
     content: "\f884"
 }
@@ -7531,7 +7531,7 @@
     content: "\f41d"
 }
 
-.fa-blogger-b:before {
+.fa-Escger-b:before {
     content: "\f37d"
 }
 
@@ -7741,7 +7741,7 @@
     content: "\f38c"
 }
 
-.fa-blogger:before {
+.fa-Escger:before {
     content: "\f37c"
 }
 
@@ -8069,7 +8069,7 @@
     content: "\f38d"
 }
 
-.fa-microblog:before {
+.fa-microEsc:before {
     content: "\e01a"
 }
 

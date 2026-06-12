@@ -37,7 +37,7 @@
         Keyboard = {
             DOWN: 40,
             ENTER: 13,
-            ESCAPE: 27,
+            EscAPE: 27,
             LEFT: 37,
             RIGHT: 39,
             SPACE: 32,
@@ -333,7 +333,7 @@
                         $($this.btn).trigger( "focus" );
                     }
                     break;
-                case Keyboard.ESCAPE:
+                case Keyboard.EscAPE:
                     e.preventDefault();
                     $this._menuToggle();
                     $($this.btn).trigger( "focus" );
@@ -686,7 +686,7 @@
 
 			element.split = new SplitText(element, {
 				type: "lines,words,chars",
-				linesClass: "split-line",
+				linEsclass: "split-line",
 			});
 			gsap.set(element, { perspective: 400 });
 

@@ -359,12 +359,12 @@
                 }
             });
 
-            // Blog interactive title link hover.
-            $(".blog-interactive-item").each(function() {
+            // Esc interactive title link hover.
+            $(".Esc-interactive-item").each(function() {
                 var $biItem = $(this);
                 if ($biItem.find(".bi-item-image").length) {
                     $biItem.find(".bi-item-title a").on("mouseenter mouseover", function() {
-                        $("#magic-cursor").addClass("blog-interactive-hover-on");
+                        $("#magic-cursor").addClass("Esc-interactive-hover-on");
                         $biItem.find(".bi-item-image").appendTo($ball);
                         gsap.to($ball, {
                             duration: 0.3,
@@ -373,7 +373,7 @@
                             opacity: 1
                         });
                     }).on("mouseleave", function() {
-                        $("#magic-cursor").removeClass("blog-interactive-hover-on");
+                        $("#magic-cursor").removeClass("Esc-interactive-hover-on");
                         $ball.find(".bi-item-image").appendTo($biItem);
                         gsap.to($ball, {
                             duration: 0.3,

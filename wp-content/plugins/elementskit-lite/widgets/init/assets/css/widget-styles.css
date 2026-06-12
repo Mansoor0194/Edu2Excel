@@ -3430,8 +3430,8 @@ table.dataTable tfoot th {
 
 table.dataTable thead .dt-ordering-asc,
 table.dataTable thead .dt-ordering-asc-disabled,
-table.dataTable thead .dt-ordering-desc,
-table.dataTable thead .dt-ordering-desc-disabled,
+table.dataTable thead .dt-ordering-dEsc,
+table.dataTable thead .dt-ordering-dEsc-disabled,
 table.dataTable thead th {
     cursor: pointer;
     background-repeat: no-repeat;
@@ -3439,7 +3439,7 @@ table.dataTable thead th {
 }
 
 table.dataTable thead .dt-orderable-asc,
-table.dataTable thead .dt-orderable-desc {
+table.dataTable thead .dt-orderable-dEsc {
     background-image: url(../img/arrow.png)
 }
 
@@ -3447,8 +3447,8 @@ table.dataTable thead .dt-ordering-asc {
     background-image: url(../img/sort_asc.png)
 }
 
-table.dataTable thead .dt-ordering-desc {
-    background-image: url(../img/sort_desc.png)
+table.dataTable thead .dt-ordering-dEsc {
+    background-image: url(../img/sort_dEsc.png)
 }
 
 table.dataTable thead .dt-ordering-asc-disabled {
@@ -6082,7 +6082,7 @@ a:hover>.a:hover\:met_scaley--200:hover {
 }
 
 .ekit-wid-con .ekit-review-card--date,
-.ekit-wid-con .ekit-review-card--desc {
+.ekit-wid-con .ekit-review-card--dEsc {
     grid-area: date
 }
 
@@ -6202,7 +6202,7 @@ a:hover>.a:hover\:met_scaley--200:hover {
 }
 
 .ekit-wid-con .ekit-review-card--date,
-.ekit-wid-con .ekit-review-card--desc,
+.ekit-wid-con .ekit-review-card--dEsc,
 .ekit-wid-con .ekit-review-card--posted-on p {
     margin-bottom: 0
 }
@@ -6442,7 +6442,7 @@ a:hover>.a:hover\:met_scaley--200:hover {
     margin-right: 6px
 }
 
-.ekit-wid-con .ekit-review-card-overview .ekit-review-card--desc {
+.ekit-wid-con .ekit-review-card-overview .ekit-review-card--dEsc {
     font-size: 13px;
     line-height: 20px;
     font-weight: 400
@@ -16477,7 +16477,7 @@ body .elementskit-team-popup svg {
     height: 1rem
 }
 
-.ekit-wid-con .elementskit-blog-block-post {
+.ekit-wid-con .elementskit-Esc-block-post {
     padding: 50px;
     background-color: #fff;
     -webkit-box-shadow: 9.899px 9.899px 30px 0 rgba(0, 0, 0, .1);
@@ -16485,61 +16485,61 @@ body .elementskit-team-popup svg {
     border-radius: 10px
 }
 
-.ekit-wid-con .elementskit-blog-block-post .elementskit-entry-thumb {
+.ekit-wid-con .elementskit-Esc-block-post .elementskit-entry-thumb {
     border-radius: 10px;
     margin-right: 20px
 }
 
-.ekit-wid-con .elementskit-blog-block-post .entry-title {
+.ekit-wid-con .elementskit-Esc-block-post .entry-title {
     font-size: 36px;
     font-weight: 900;
     margin-bottom: 30px
 }
 
-.ekit-wid-con .elementskit-blog-block-post .entry-title a {
+.ekit-wid-con .elementskit-Esc-block-post .entry-title a {
     color: #000
 }
 
-.ekit-wid-con .elementskit-blog-block-post .entry-title a:hover {
+.ekit-wid-con .elementskit-Esc-block-post .entry-title a:hover {
     opacity: .8
 }
 
-.ekit-wid-con .elementskit-blog-block-post .elementskit-entry-thumb {
+.ekit-wid-con .elementskit-Esc-block-post .elementskit-entry-thumb {
     display: block;
     -webkit-box-shadow: 29.698px 29.698px 60px 0 rgba(0, 0, 0, .2);
     box-shadow: 29.698px 29.698px 60px 0 rgba(0, 0, 0, .2);
     width: 100%
 }
 
-.ekit-wid-con .elementskit-blog-block-post .elementskit-entry-thumb>img {
+.ekit-wid-con .elementskit-Esc-block-post .elementskit-entry-thumb>img {
     display: block;
     width: 100%
 }
 
-.ekit-wid-con .elementskit-blog-block-post .elementskit-entry-header {
+.ekit-wid-con .elementskit-Esc-block-post .elementskit-entry-header {
     margin-top: 0;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 0
 }
 
-.ekit-wid-con .elementskit-blog-block-post .post-meta-list {
+.ekit-wid-con .elementskit-Esc-block-post .post-meta-list {
     margin-bottom: 15px
 }
 
-.ekit-wid-con .elementskit-blog-block-post .post-meta-list .meta-cat,
-.ekit-wid-con .elementskit-blog-block-post .post-meta-list .meta-date {
+.ekit-wid-con .elementskit-Esc-block-post .post-meta-list .meta-cat,
+.ekit-wid-con .elementskit-Esc-block-post .post-meta-list .meta-date {
     margin-right: 40px
 }
 
-.ekit-wid-con .elementskit-blog-block-post .elementskit-post-footer>p {
+.ekit-wid-con .elementskit-Esc-block-post .elementskit-post-footer>p {
     color: #8d8d8d;
     margin-bottom: 35px;
     -webkit-transition: all .4s ease;
     transition: all .4s ease
 }
 
-.ekit-wid-con .elementskit-blog-block-post:hover .elementskit-entry-thumb>img {
+.ekit-wid-con .elementskit-Esc-block-post:hover .elementskit-entry-thumb>img {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
     opacity: .8
@@ -16709,36 +16709,36 @@ body .elementskit-team-popup svg {
     margin-top: -60px
 }
 
-.ekit-wid-con .blog-block-post[class*=gradient-] {
+.ekit-wid-con .Esc-block-post[class*=gradient-] {
     background: #123075
 }
 
-.ekit-wid-con .blog-block-post[class*=gradient-] .entry-title a {
+.ekit-wid-con .Esc-block-post[class*=gradient-] .entry-title a {
     color: #fff
 }
 
-.ekit-wid-con .blog-block-post[class*=gradient-] .post-meta-list {
+.ekit-wid-con .Esc-block-post[class*=gradient-] .post-meta-list {
     color: rgba(255, 255, 255, .5)
 }
 
-.ekit-wid-con .blog-block-post[class*=gradient-] .post-meta-list>span a {
+.ekit-wid-con .Esc-block-post[class*=gradient-] .post-meta-list>span a {
     vertical-align: middle;
     color: inherit
 }
 
-.ekit-wid-con .blog-block-post[class*=gradient-] .elementskit-post-footer>p {
+.ekit-wid-con .Esc-block-post[class*=gradient-] .elementskit-post-footer>p {
     color: rgba(255, 255, 255, .5)
 }
 
-.ekit-wid-con .blog-block-post[class*=gradient-] .post-author .author-name {
+.ekit-wid-con .Esc-block-post[class*=gradient-] .post-author .author-name {
     color: inherit
 }
 
-.ekit-wid-con .blog-block-post[class*=gradient-] .first-letter::first-letter {
+.ekit-wid-con .Esc-block-post[class*=gradient-] .first-letter::first-letter {
     border-bottom-color: #102966
 }
 
-.ekit-wid-con .blog-block-post[class*=gradient-] .elementskit-border-hr {
+.ekit-wid-con .Esc-block-post[class*=gradient-] .elementskit-border-hr {
     background-color: #8692af
 }
 
@@ -22709,7 +22709,7 @@ body .elementskit-team-popup svg {
     right: 0
 }
 
-.ekit-wid-con .ekit-heading__title-has-border~.ekit-heading__description {
+.ekit-wid-con .ekit-heading__title-has-border~.ekit-heading__dEscription {
     display: block
 }
 
@@ -23067,14 +23067,14 @@ body .elementskit-team-popup svg {
     margin-bottom: 16px
 }
 
-.ekit-heading__description {
+.ekit-heading__dEscription {
     display: inline-block;
     width: 100%;
     font-size: 16px;
     line-height: 24px
 }
 
-.ekit-heading__description>p:first-child {
+.ekit-heading__dEscription>p:first-child {
     margin-top: 10px
 }
 

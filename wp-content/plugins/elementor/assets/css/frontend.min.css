@@ -299,21 +299,21 @@ html[dir=rtl] {
 }
 
 @media (min-width:-1) {
-    .elementor-widescreen-align-center {
+    .elementor-widEscreen-align-center {
         text-align: center
     }
-    .elementor-widescreen-align-right {
+    .elementor-widEscreen-align-right {
         text-align: right
     }
-    .elementor-widescreen-align-left {
+    .elementor-widEscreen-align-left {
         text-align: left
     }
-    .elementor-widescreen-align-center .elementor-button,
-    .elementor-widescreen-align-left .elementor-button,
-    .elementor-widescreen-align-right .elementor-button {
+    .elementor-widEscreen-align-center .elementor-button,
+    .elementor-widEscreen-align-left .elementor-button,
+    .elementor-widEscreen-align-right .elementor-button {
         width: auto
     }
-    .elementor-widescreen-align-justify .elementor-button {
+    .elementor-widEscreen-align-justify .elementor-button {
         width: 100%
     }
 }
@@ -818,34 +818,34 @@ h1.entry-title {
 }
 
 @media (min-width:-1) {
-    .elementor-reverse-widescreen>.elementor-container>:first-child {
+    .elementor-reverse-widEscreen>.elementor-container>:first-child {
         order: 10
     }
-    .elementor-reverse-widescreen>.elementor-container>:nth-child(2) {
+    .elementor-reverse-widEscreen>.elementor-container>:nth-child(2) {
         order: 9
     }
-    .elementor-reverse-widescreen>.elementor-container>:nth-child(3) {
+    .elementor-reverse-widEscreen>.elementor-container>:nth-child(3) {
         order: 8
     }
-    .elementor-reverse-widescreen>.elementor-container>:nth-child(4) {
+    .elementor-reverse-widEscreen>.elementor-container>:nth-child(4) {
         order: 7
     }
-    .elementor-reverse-widescreen>.elementor-container>:nth-child(5) {
+    .elementor-reverse-widEscreen>.elementor-container>:nth-child(5) {
         order: 6
     }
-    .elementor-reverse-widescreen>.elementor-container>:nth-child(6) {
+    .elementor-reverse-widEscreen>.elementor-container>:nth-child(6) {
         order: 5
     }
-    .elementor-reverse-widescreen>.elementor-container>:nth-child(7) {
+    .elementor-reverse-widEscreen>.elementor-container>:nth-child(7) {
         order: 4
     }
-    .elementor-reverse-widescreen>.elementor-container>:nth-child(8) {
+    .elementor-reverse-widEscreen>.elementor-container>:nth-child(8) {
         order: 3
     }
-    .elementor-reverse-widescreen>.elementor-container>:nth-child(9) {
+    .elementor-reverse-widEscreen>.elementor-container>:nth-child(9) {
         order: 2
     }
-    .elementor-reverse-widescreen>.elementor-container>:nth-child(10) {
+    .elementor-reverse-widEscreen>.elementor-container>:nth-child(10) {
         order: 1
     }
 }
@@ -1180,51 +1180,51 @@ h1.entry-title {
 }
 
 @media (min-width:-1) {
-    .elementor-grid-widescreen-0 .elementor-grid {
+    .elementor-grid-widEscreen-0 .elementor-grid {
         display: inline-block;
         margin-block-end: calc(-1 * var(--grid-row-gap));
         width: 100%;
         word-spacing: var(--grid-column-gap)
     }
-    .elementor-grid-widescreen-0 .elementor-grid .elementor-grid-item {
+    .elementor-grid-widEscreen-0 .elementor-grid .elementor-grid-item {
         display: inline-block;
         margin-block-end: var(--grid-row-gap);
         word-break: break-word
     }
-    .elementor-grid-widescreen-1 .elementor-grid {
+    .elementor-grid-widEscreen-1 .elementor-grid {
         grid-template-columns: repeat(1, 1fr)
     }
-    .elementor-grid-widescreen-2 .elementor-grid {
+    .elementor-grid-widEscreen-2 .elementor-grid {
         grid-template-columns: repeat(2, 1fr)
     }
-    .elementor-grid-widescreen-3 .elementor-grid {
+    .elementor-grid-widEscreen-3 .elementor-grid {
         grid-template-columns: repeat(3, 1fr)
     }
-    .elementor-grid-widescreen-4 .elementor-grid {
+    .elementor-grid-widEscreen-4 .elementor-grid {
         grid-template-columns: repeat(4, 1fr)
     }
-    .elementor-grid-widescreen-5 .elementor-grid {
+    .elementor-grid-widEscreen-5 .elementor-grid {
         grid-template-columns: repeat(5, 1fr)
     }
-    .elementor-grid-widescreen-6 .elementor-grid {
+    .elementor-grid-widEscreen-6 .elementor-grid {
         grid-template-columns: repeat(6, 1fr)
     }
-    .elementor-grid-widescreen-7 .elementor-grid {
+    .elementor-grid-widEscreen-7 .elementor-grid {
         grid-template-columns: repeat(7, 1fr)
     }
-    .elementor-grid-widescreen-8 .elementor-grid {
+    .elementor-grid-widEscreen-8 .elementor-grid {
         grid-template-columns: repeat(8, 1fr)
     }
-    .elementor-grid-widescreen-9 .elementor-grid {
+    .elementor-grid-widEscreen-9 .elementor-grid {
         grid-template-columns: repeat(9, 1fr)
     }
-    .elementor-grid-widescreen-10 .elementor-grid {
+    .elementor-grid-widEscreen-10 .elementor-grid {
         grid-template-columns: repeat(10, 1fr)
     }
-    .elementor-grid-widescreen-11 .elementor-grid {
+    .elementor-grid-widEscreen-11 .elementor-grid {
         grid-template-columns: repeat(11, 1fr)
     }
-    .elementor-grid-widescreen-12 .elementor-grid {
+    .elementor-grid-widEscreen-12 .elementor-grid {
         grid-template-columns: repeat(12, 1fr)
     }
 }
@@ -1484,7 +1484,7 @@ h1.entry-title {
 
 @media (min-width:-1) {
     #elementor-device-mode:after {
-        content: "widescreen"
+        content: "widEscreen"
     }
 }
 
@@ -2433,7 +2433,7 @@ body.rtl .e-con {
 }
 
 @media (min-width:-1) {
-    .elementor .elementor-hidden-widescreen {
+    .elementor .elementor-hidden-widEscreen {
         display: none
     }
 }

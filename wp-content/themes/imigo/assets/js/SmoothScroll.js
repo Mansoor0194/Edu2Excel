@@ -26,7 +26,7 @@
         // Pulse (less tweakable)
         // ratio of "tail" to "acceleration"
         pulseAlgorithm: true,
-        pulseScale: 4,
+        pulsEscale: 4,
         pulseNormalize: 1,
 
         // Acceleration
@@ -727,7 +727,7 @@
     function pulse_(x) {
         var val, start, expx;
         // test
-        x = x * options.pulseScale;
+        x = x * options.pulsEscale;
         if (x < 1) { // acceleartion
             val = x - (1 - Math.exp(-x));
         } else { // tail

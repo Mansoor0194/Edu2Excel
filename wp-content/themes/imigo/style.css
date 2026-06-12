@@ -1,7 +1,7 @@
 /*
 Theme Name: Imigo
 Theme URI: https://1.envato.market/imigo-wp
-Description: Immigration and Visa WordPress Theme
+DEscription: Immigration and Visa WordPress Theme
 Author: AwaikenThemes
 Author URI: https://awaikenthemes.com/
 Version: 1.0.4
@@ -11,7 +11,7 @@ Requires PHP: 7.4
 License: Themeforest Split Licence
 License URI: https://themeforest.net/licenses/standard
 Text Domain: imigo
-Tags: one-column, two-columns, three-columns, four-columns, custom-colors, custom-menu, custom-logo, editor-style, featured-images, threaded-comments, style-variations, blog
+Tags: one-column, two-columns, three-columns, four-columns, custom-colors, custom-menu, custom-logo, editor-style, featured-images, threaded-comments, style-variations, Esc
 */
 
 html,
@@ -850,12 +850,12 @@ header.main-header .header-sticky.active {
     word-wrap: break-word;
 }
 
-.page-header-box .taxonomy-description {
+.page-header-box .taxonomy-dEscription {
     color: var(--e-global-color-white);
     margin-bottom: 15px;
 }
 
-.page-header-box .taxonomy-description p {
+.page-header-box .taxonomy-dEscription p {
     margin: 0 !important;
 }
 
@@ -1041,7 +1041,7 @@ footer.footer {
 
 /* Archive and Single CSS */
 
-.page-blog-archive {
+.page-Esc-archive {
     padding: 100px 0;
 }
 
@@ -1479,14 +1479,14 @@ footer.footer {
     .page-header-box h1 {
         font-size: 48px !important;
     }
-    .page-header-box .taxonomy-description {
+    .page-header-box .taxonomy-dEscription {
         margin-bottom: 10px;
     }
     .page-header-box .trail-items,
     .page-header-box .post-meta ul {
         font-size: 18px;
     }
-    .page-blog-archive {
+    .page-Esc-archive {
         padding: 50px 0;
     }
     .post-featured-image:has(a) {
@@ -3942,17 +3942,17 @@ body.admin-bar .main-header.ekit-sticky--effects {
     display: none;
 }
 
-.page-blog img {
+.page-Esc img {
     aspect-ratio: 1 / 0.77;
     object-fit: cover;
 }
 
-.page-blog .elementskit-post-image-card,
-.page-blog .elementskit-entry-header {
+.page-Esc .elementskit-post-image-card,
+.page-Esc .elementskit-entry-header {
     overflow: hidden;
 }
 
-.page-blog .elementskit-entry-header::before {
+.page-Esc .elementskit-entry-header::before {
     content: "";
     position: absolute;
     width: 200%;
@@ -3964,27 +3964,27 @@ body.admin-bar .main-header.ekit-sticky--effects {
     z-index: 1;
 }
 
-.page-blog .elementskit-entry-header:hover:before {
+.page-Esc .elementskit-entry-header:hover:before {
     height: 250%;
     transition: all 600ms linear;
     background-color: transparent;
 }
 
-.page-blog .elementskit-post-image-card:hover img {
+.page-Esc .elementskit-post-image-card:hover img {
     transform: scale(1.1) !important;
     opacity: 1 !important;
 }
 
-.page-blog .elementskit-btn svg {
+.page-Esc .elementskit-btn svg {
     transition: all 0.3s ease-in-out;
     margin-left: 5px;
 }
 
-.page-blog .elementskit-btn:hover svg {
+.page-Esc .elementskit-btn:hover svg {
     transform: translateX(2px);
 }
 
-.page-blog .btn-wraper svg path {
+.page-Esc .btn-wraper svg path {
     stroke: none !important;
 }
 
@@ -4377,12 +4377,12 @@ body.admin-bar .main-header.ekit-sticky--effects {
 }
 
 .process-step-item .process-step-content .elementor-icon-box-title,
-.process-step-item .process-step-content .elementor-icon-box-description {
+.process-step-item .process-step-content .elementor-icon-box-dEscription {
     transition: all 0.3s ease-in-out;
 }
 
 .process-step-item:hover .process-step-content .elementor-icon-box-title,
-.process-step-item:hover .process-step-content .elementor-icon-box-description {
+.process-step-item:hover .process-step-content .elementor-icon-box-dEscription {
     color: var(--e-global-color-white) !important;
 }
 
