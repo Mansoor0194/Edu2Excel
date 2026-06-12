@@ -65,16 +65,20 @@ walkDir('.', (filePath) => {
   });
 
   // 4. Update the "Our Team" navigation links in all files
-  // Match menu-item-3861
   const menu3861Regex = /(<li id="menu-item-3861"[^>]*>\s*<a[^>]*href=")[^"]*("[^>]*>Our Team<\/a>)/g;
   content = content.replace(menu3861Regex, (match, p1, p2) => {
     return p1 + prefix + '/our-team/index.html' + p2;
   });
 
-  // Match menu-item-4167
   const menu4167Regex = /(<li id="menu-item-4167"[^>]*>\s*<a[^>]*href=")[^"]*("[^>]*>Our Team<\/a>)/g;
   content = content.replace(menu4167Regex, (match, p1, p2) => {
     return p1 + prefix + '/our-team/index.html' + p2;
+  });
+
+  // 5. Update "Team Details" navigation links in all files
+  const menu3864Regex = /(<li id="menu-item-3864"[^>]*>\s*<a[^>]*href=")[^"]*("[^>]*>Team Details<\/a>)/g;
+  content = content.replace(menu3864Regex, (match, p1, p2) => {
+    return p1 + prefix + '/our-team/nia-jex/index.html' + p2;
   });
 
   if (content !== originalContent) {
