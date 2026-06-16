@@ -3159,6 +3159,43 @@ aside.widget .wp-block-social-links {
     padding-right: 0;
 }
 
+@media only screen and (min-width: 1025px) {
+    .elementor-3756 .elementor-element.elementor-element-f86df08 {
+        --width: 16%;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-0471456 {
+        --width: 68%;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-fa39a20 {
+        --width: 16%;
+    }
+
+    .header-menu .elementskit-navbar-nav {
+        flex-wrap: nowrap !important;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav>li>a {
+        font-size: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav-default .elementskit-dropdown-has>a .elementskit-submenu-indicator {
+        margin-left: 5px;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-45ee8e1 .elementskit-infobox .box-body>p {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+}
+
 body.admin-bar .main-header.ekit-sticky--effects {
     top: 32px !important;
 }
@@ -3191,6 +3228,29 @@ body.admin-bar .main-header.ekit-sticky--effects {
 
 .header-menu .elementskit-navbar-nav .elementskit-submenu-panel {
     margin-left: 0;
+}
+
+.header-menu .elementskit-navbar-nav .edu-countries-nav {
+    width: 680px;
+    max-width: calc(100vw - 40px);
+    max-height: 70vh;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+}
+
+.header-menu .elementskit-navbar-nav .edu-countries-nav li a {
+    white-space: nowrap;
+}
+
+.header-menu .elementskit-navbar-nav .edu-services-nav {
+    width: 360px;
+    max-width: calc(100vw - 40px);
+}
+
+.header-menu .elementskit-navbar-nav .edu-services-nav li a {
+    white-space: nowrap;
 }
 
 .coll-icon-box .elementskit-infobox .elementskit-box-header {
@@ -3240,6 +3300,13 @@ body.admin-bar .main-header.ekit-sticky--effects {
     .elementskit-navbar-nav .elementskit-submenu-panel {
         background: none !important;
         margin-left: 20px;
+    }
+    .header-menu .elementskit-navbar-nav .edu-countries-nav {
+        width: auto;
+        max-width: none;
+        max-height: none;
+        overflow-y: visible;
+        display: block;
     }
     .mobile-menu {
         display: block;
