@@ -3165,11 +3165,13 @@ aside.widget .wp-block-social-links {
     }
 
     .elementor-3756 .elementor-element.elementor-element-0471456 {
-        --width: 68%;
+        --width: 62%;
     }
 
     .elementor-3756 .elementor-element.elementor-element-fa39a20 {
-        --width: 16%;
+        --width: 22%;
+        height: 100px !important;
+        align-items: center !important;
     }
 
     .header-menu .elementskit-navbar-nav {

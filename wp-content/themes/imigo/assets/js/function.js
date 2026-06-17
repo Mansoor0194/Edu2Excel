@@ -791,6 +791,13 @@
 			portfolio_grid
 		);
 	});
+
+	// Manual fallback initialization for static pages
+	$(function () {
+		$(".elementor-widget-imigo-countries-grid").each(function () {
+			portfolio_grid($(this), $);
+		});
+	});
 	
 	/* Our Services Active Start */
 	if ($('.our-services').length) {
