@@ -85,6 +85,162 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 						background-image: none !important;
 					}
 				}
+
+				/* Custom premium form styling overrides */
+				#contactForm .form-control {
+					font-family: inherit !important;
+					font-size: 16px !important;
+					font-weight: 500 !important;
+					color: #002768 !important; /* Theme Primary Navy */
+					background-color: #EFF4FA99 !important; /* Secondary background */
+					border: 1.5px solid transparent !important;
+					border-radius: 8px !important;
+					height: 60px !important;
+					transition: all 0.3s ease-in-out !important;
+					padding: 12px 18px !important;
+				}
+
+				#contactForm .form-control:focus,
+				#contactForm .form-control:active,
+				#contactForm .form-control:focus-visible {
+					border-color: #BE0B32 !important; /* Theme Accent Red on focus */
+					background-color: #FFFFFF !important;
+					box-shadow: 0 0 10px rgba(190, 11, 50, 0.15) !important;
+					outline: none !important;
+				}
+
+				#contactForm textarea.form-control {
+					height: 150px !important;
+					padding-top: 15px !important;
+				}
+
+				#contactForm .form-control::selection {
+					background-color: #BE0B32 !important;
+					color: #FFFFFF !important;
+				}
+				#contactForm .form-control::-moz-selection {
+					background-color: #BE0B32 !important;
+					color: #FFFFFF !important;
+				}
+
+				/* Custom Select dropdown styled to prevent native browser styling issues */
+				.custom-select-container {
+					position: relative;
+					width: 100%;
+				}
+
+				.custom-select-trigger {
+					display: flex !important;
+					align-items: center;
+					justify-content: space-between;
+					font-family: inherit !important;
+					font-size: 16px !important;
+					font-weight: 500 !important;
+					color: #002768 !important;
+					background-color: #EFF4FA99 !important;
+					border: 1.5px solid transparent !important;
+					border-radius: 8px !important;
+					height: 60px !important;
+					padding: 12px 18px !important;
+					cursor: pointer;
+					user-select: none;
+					transition: all 0.3s ease-in-out !important;
+				}
+
+				.custom-select-trigger:after {
+					content: "";
+					width: 14px;
+					height: 14px;
+					background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%3E%3Cpath%20fill%3D%22%23BE0B32%22%20d%3D%22M11.9%204.9c-.3-.3-.8-.3-1.1%200L7%208.7%203.2%204.9c-.3-.3-.8-.3-1.1%200s-.3.8%200%201.1l4.3%204.3c.2.2.4.3.6.3s.4-.1.6-.3l4.3-4.3c.3-.3.3-.8%200-1.1z%22%2F%3E%3C%2Fsvg%3E") !important;
+					background-repeat: no-repeat;
+					background-size: contain;
+					transition: transform 0.3s ease-in-out;
+				}
+
+				.custom-select-container.open .custom-select-trigger {
+					border-color: #BE0B32 !important;
+					background-color: #FFFFFF !important;
+					box-shadow: 0 0 10px rgba(190, 11, 50, 0.15) !important;
+				}
+
+				.custom-select-container.open .custom-select-trigger:after {
+					transform: rotate(180deg);
+				}
+
+				.custom-select-options {
+					position: absolute;
+					top: calc(100% + 5px);
+					left: 0;
+					right: 0;
+					background-color: #FFFFFF;
+					border: 1.5px solid #EFF4FA;
+					border-radius: 8px;
+					box-shadow: 0 5px 15px rgba(0, 39, 104, 0.08);
+					z-index: 1000;
+					max-height: 220px;
+					overflow-y: auto;
+					opacity: 0;
+					visibility: hidden;
+					transform: translateY(-10px);
+					transition: all 0.3s ease-in-out;
+				}
+
+				.custom-select-container.open .custom-select-options {
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(0);
+				}
+
+				.custom-option {
+					display: block;
+					padding: 12px 18px;
+					font-size: 16px;
+					font-weight: 500;
+					color: #556171;
+					cursor: pointer;
+					transition: all 0.2s ease-in-out;
+					text-align: left;
+				}
+
+				.custom-option:hover,
+				.custom-option.selected {
+					background-color: #BE0B32 !important;
+					color: #FFFFFF !important;
+				}
+
+				/* Custom Red Scrollbar matching the theme */
+				::-webkit-scrollbar {
+					width: 10px !important;
+					height: 10px !important;
+				}
+				::-webkit-scrollbar-track {
+					background: #EFF4FA !important;
+				}
+				::-webkit-scrollbar-thumb {
+					background: #BE0B32 !important; /* Theme Accent Red */
+					border-radius: 5px !important;
+				}
+				::-webkit-scrollbar-thumb:hover {
+					background: #900823 !important;
+				}
+				* {
+					scrollbar-width: thin;
+					scrollbar-color: #BE0B32 #EFF4FA;
+				}
+
+				/* Styling success/response message to match Send Message button's font and color */
+				#contactForm .wpcf7-response-output {
+					font-family: 'Afacad Flux', sans-serif !important;
+					font-size: 18px !important;
+					font-weight: 700 !important;
+					text-align: center !important;
+					border-radius: 30px !important;
+					padding: 12px 25px !important;
+					margin-top: 20px !important;
+					border: 1px solid transparent !important;
+					background-color: transparent !important;
+					transition: all 0.3s ease-in-out !important;
+				}
 			</style>
 						<meta name="theme-color" content="#FFFFFF">
 			<link rel="icon" href="../wp-content/uploads/2024/12/favicon.png" sizes="32x32">
@@ -415,8 +571,8 @@ europeadmission@edu2excel.com</p>
                         <div class="box-body">
                             <h3 class="elementskit-info-box-title">
                     Time                </h3>
-                        		  	<p>Mon - Fri,   8 AM - 6 AM <br>
-Saturday,  8 AM - 4 AM</p>
+                        		  	<p>Mon - Fri,   8 AM - 6 PM <br>
+Saturday,  8 AM - 4 PM</p>
                                 </div>
         
         
@@ -450,7 +606,7 @@ Saturday,  8 AM - 4 AM</p>
 					<div class="ekit-wid-con"><div class="ekit-form">
 <div class="wpcf7 no-js" id="wpcf7-f3568-p3514-o1" lang="en-US" dir="ltr" data-wpcf7-id="3568">
 <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form action="/imigo/contact-us/#wpcf7-f3568-p3514-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+<form id="contactForm" action="/imigo/contact-us/#wpcf7-f3568-p3514-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
 <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="3568"><input type="hidden" name="_wpcf7_version" value="6.1.5"><input type="hidden" name="_wpcf7_locale" value="en_US"><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f3568-p3514-o1"><input type="hidden" name="_wpcf7_container_post" value="3514"><input type="hidden" name="_wpcf7_posted_data_hash" value="">
 </fieldset>
 <div class="row">
@@ -463,8 +619,74 @@ Saturday,  8 AM - 4 AM</p>
 		</p>
 	</div>
 	<div class="form-group col-md-6 mb-4">
-		<p><span class="wpcf7-form-control-wrap" data-name="phone"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="phone" aria-required="true" aria-invalid="false" placeholder="Your Phone" value="" type="text" name="phone"></span>
+		<p><span class="wpcf7-form-control-wrap" data-name="phone"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="phone" aria-required="true" aria-invalid="false" placeholder="+91 1234567890" value="" type="text" name="phone"></span>
 		</p>
+	</div>
+	<div class="form-group col-md-4 mb-4">
+		<p><span class="wpcf7-form-control-wrap" data-name="country">
+			<select class="wpcf7-form-control wpcf7-select form-control" id="country" name="country" aria-invalid="false">
+				<option value="">Preferred Country</option>
+				<option value="Australia">Australia</option>
+				<option value="Austria">Austria</option>
+				<option value="Belgium">Belgium</option>
+				<option value="Bulgaria">Bulgaria</option>
+				<option value="Canada">Canada</option>
+				<option value="Croatia">Croatia</option>
+				<option value="Czech Republic">Czech Republic</option>
+				<option value="Denmark">Denmark</option>
+				<option value="Estonia">Estonia</option>
+				<option value="Finland">Finland</option>
+				<option value="France">France</option>
+				<option value="Germany">Germany</option>
+				<option value="Greece">Greece</option>
+				<option value="Hungary">Hungary</option>
+				<option value="Iceland">Iceland</option>
+				<option value="Ireland">Ireland</option>
+				<option value="Italy">Italy</option>
+				<option value="Latvia">Latvia</option>
+				<option value="Liechtenstein">Liechtenstein</option>
+				<option value="Lithuania">Lithuania</option>
+				<option value="Luxembourg">Luxembourg</option>
+				<option value="Malta">Malta</option>
+				<option value="Netherlands">Netherlands</option>
+				<option value="New Zealand">New Zealand</option>
+				<option value="Norway">Norway</option>
+				<option value="Poland">Poland</option>
+				<option value="Portugal">Portugal</option>
+				<option value="Romania">Romania</option>
+				<option value="Slovakia">Slovakia</option>
+				<option value="Slovenia">Slovenia</option>
+				<option value="Spain">Spain</option>
+				<option value="Sweden">Sweden</option>
+				<option value="Switzerland">Switzerland</option>
+				<option value="UK">UK</option>
+				<option value="USA">USA</option>
+				<option value="Other">Other</option>
+			</select>
+		</span></p>
+	</div>
+	<div class="form-group col-md-4 mb-4">
+		<p><span class="wpcf7-form-control-wrap" data-name="program">
+			<select class="wpcf7-form-control wpcf7-select form-control" id="program" name="program" aria-invalid="false">
+				<option value="">Select Program</option>
+				<option value="Bachelors">Bachelors / Undergraduate</option>
+				<option value="Masters">Masters / Postgraduate</option>
+				<option value="Diploma">Diploma / Certificate</option>
+				<option value="Doctorate">Doctorate / Ph.D.</option>
+				<option value="Other">Other</option>
+			</select>
+		</span></p>
+	</div>
+	<div class="form-group col-md-4 mb-4">
+		<p><span class="wpcf7-form-control-wrap" data-name="budget">
+			<select class="wpcf7-form-control wpcf7-select form-control" id="budget" name="budget" aria-invalid="false">
+				<option value="">Select Budget</option>
+				<option value="Below 2 Lakhs">Below 2 Lakhs</option>
+				<option value="2-3 Lakhs">2 Lakhs - 3 Lakhs</option>
+				<option value="3-5 Lakhs">3 Lakhs - 5 Lakhs</option>
+				<option value="Above 5 Lakhs">Above 5 Lakhs</option>
+			</select>
+		</span></p>
 	</div>
 	<div class="form-group col-md-12 mb-4">
 		<p><span class="wpcf7-form-control-wrap" data-name="message"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea form-control" id="msg" aria-invalid="false" placeholder="Write Message.." name="message"></textarea></span>
@@ -706,6 +928,177 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 //# sourceURL=../wp-includes/js/wp-emoji-loader.min.js
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.getElementById("contactForm");
+    const submitBtn = document.getElementById("msgSubmit");
+    const responseOutput = document.querySelector(".wpcf7-response-output");
 
+    // Convert standard select boxes to custom dropdowns to override OS highlight colors
+    if (document.getElementById("country")) makeSelectCustom("country");
+    if (document.getElementById("program")) makeSelectCustom("program");
+    if (document.getElementById("budget")) makeSelectCustom("budget");
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const message = document.getElementById("msg").value.trim();
+            const country = document.getElementById("country").value;
+            const program = document.getElementById("program").value;
+            const budget = document.getElementById("budget").value;
+
+            if (!name || !email || !phone) {
+                responseOutput.className = "wpcf7-response-output";
+                responseOutput.style.color = "#cf2e2e"; // Vivid Red
+                responseOutput.style.borderColor = "#cf2e2e";
+                responseOutput.style.backgroundColor = "rgba(207, 46, 46, 0.05)";
+                responseOutput.textContent = "Please fill in all required fields (Name, Email, Phone).";
+                responseOutput.style.display = "block";
+                return;
+            }
+
+            submitBtn.value = "Sending...";
+            submitBtn.disabled = true;
+
+            // Web3Forms payload
+            const formData = {
+                access_key: "b775ee2f-5591-4d65-acdb-2ec1070bc7f4",
+                name: name,
+                email: email,
+                phone: phone,
+                country: country || "Not specified",
+                program: program || "Not specified",
+                budget: budget || "Not specified",
+                message: message || "No message provided",
+                subject: "New Edu2Excel Inquiry from " + name
+            };
+
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    responseOutput.style.color = "#BE0B32"; // Same color as Send Message button
+                    responseOutput.style.borderColor = "#BE0B32";
+                    responseOutput.style.backgroundColor = "rgba(190, 11, 50, 0.05)";
+                    responseOutput.textContent = "Thank you! Your message has been sent successfully.";
+                    contactForm.reset();
+                } else {
+                    responseOutput.style.color = "#cf2e2e";
+                    responseOutput.style.borderColor = "#cf2e2e";
+                    responseOutput.style.backgroundColor = "rgba(207, 46, 46, 0.05)";
+                    responseOutput.textContent = json.message || "Something went wrong. Please try again.";
+                }
+            })
+            .catch((error) => {
+                responseOutput.style.color = "#cf2e2e";
+                responseOutput.style.borderColor = "#cf2e2e";
+                responseOutput.style.backgroundColor = "rgba(207, 46, 46, 0.05)";
+                responseOutput.textContent = "Could not connect to the server. Please try again.";
+            })
+            .then(() => {
+                submitBtn.value = "Send Message";
+                submitBtn.disabled = false;
+                responseOutput.style.display = "block";
+                setTimeout(() => {
+                    responseOutput.style.display = "none";
+                }, 7000);
+            });
+        });
+
+        // Reset the custom select trigger text when form is reset
+        contactForm.addEventListener("reset", function() {
+            setTimeout(() => {
+                document.querySelectorAll(".custom-select-container").forEach(container => {
+                    const originalSelect = container.previousSibling;
+                    const triggerSpan = container.querySelector(".custom-select-trigger span");
+                    if (originalSelect && triggerSpan) {
+                        const selectedOption = originalSelect.options[originalSelect.selectedIndex];
+                        triggerSpan.textContent = selectedOption ? selectedOption.textContent : "";
+                    }
+                    container.querySelectorAll(".custom-option").forEach(opt => {
+                        if (opt.getAttribute("data-value") === "") {
+                            opt.classList.add("selected");
+                        } else {
+                            opt.classList.remove("selected");
+                        }
+                    });
+                });
+            }, 50);
+        });
+    }
+});
+
+// Custom Select Dropdown Builder
+function makeSelectCustom(selectId) {
+    const originalSelect = document.getElementById(selectId);
+    if (!originalSelect) return;
+
+    const container = document.createElement("div");
+    container.className = "custom-select-container";
+
+    const trigger = document.createElement("div");
+    trigger.className = "custom-select-trigger";
+    
+    const selectedOption = originalSelect.options[originalSelect.selectedIndex];
+    const triggerSpan = document.createElement("span");
+    triggerSpan.textContent = selectedOption ? selectedOption.textContent : originalSelect.placeholder || "";
+    trigger.appendChild(triggerSpan);
+
+    const optionsPanel = document.createElement("div");
+    optionsPanel.className = "custom-select-options";
+
+    Array.from(originalSelect.options).forEach((option) => {
+        const optDiv = document.createElement("div");
+        optDiv.className = "custom-option";
+        optDiv.textContent = option.textContent;
+        optDiv.setAttribute("data-value", option.value);
+
+        if (option.selected) {
+            optDiv.classList.add("selected");
+        }
+
+        optDiv.addEventListener("click", (e) => {
+            e.stopPropagation();
+            optionsPanel.querySelectorAll(".custom-option").forEach(el => el.classList.remove("selected"));
+            optDiv.classList.add("selected");
+            triggerSpan.textContent = option.textContent;
+            originalSelect.value = option.value;
+            originalSelect.dispatchEvent(new Event("change"));
+            container.classList.remove("open");
+        });
+
+        optionsPanel.appendChild(optDiv);
+    });
+
+    container.appendChild(trigger);
+    container.appendChild(optionsPanel);
+
+    originalSelect.style.display = "none";
+    originalSelect.parentNode.insertBefore(container, originalSelect.nextSibling);
+
+    trigger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        document.querySelectorAll(".custom-select-container").forEach(el => {
+            if (el !== container) el.classList.remove("open");
+        });
+        container.classList.toggle("open");
+    });
+
+    document.addEventListener("click", () => {
+        container.classList.remove("open");
+    });
+}
+</script>
 
 </body></html>
