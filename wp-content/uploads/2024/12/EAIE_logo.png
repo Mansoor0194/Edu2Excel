@@ -1,0 +1,2700 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KJ4DZDC');
+    </script>
+    <!-- End Google Tag Manager -->
+
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://www.ibtoverseas.com/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://www.ibtoverseas.com/assets/css/custom.css" rel="stylesheet">
+        <link href="https://www.ibtoverseas.com/assets/css/style.css" rel="stylesheet">
+        <link href="https://www.ibtoverseas.com/assets/css/homePage.css" rel="stylesheet">
+        <link href="https://www.ibtoverseas.com/assets/css/lightbox.min.css" rel="stylesheet">
+        <link href="https://www.ibtoverseas.com/assets/css/owl.carousel.min.css" rel="stylesheet">
+        <link href="https://www.ibtoverseas.com/assets/css/owl.theme.default.min.css" rel="stylesheet">
+        <link href="https://www.ibtoverseas.com/assets/css/responsive.css" rel="stylesheet">
+        <link href="https://www.ibtoverseas.com/assets/css/prettyPhoto.css" rel="stylesheet">
+        <link href="https://www.ibtoverseas.com/assets/css/portfolio-styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500" rel="stylesheet">
+
+        <script src="https://www.ibtoverseas.com/assets/js/jquery.min.js"></script>
+        <script src="https://www.ibtoverseas.com/assets/js/bootstrap.min.js"></script>
+        <script src="https://www.ibtoverseas.com/assets/js/owl.carousel.js"></script>
+        <script src="https://www.ibtoverseas.com/assets/js/Util.js"></script>
+        <script>
+    BASE_URL = "https://www.ibtoverseas.com/";
+    </script>
+
+    
+
+    <!-- <link rel="shortcut icon" sizes="16x16" href="" type="image/x-icon" /> -->
+
+    <link rel="shortcut icon" sizes="16x16" href="https://www.ibtindia.com/assets/upload/setting/favicon/1542090193.png"
+        type="image/x-icon" />
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJ4DZDC" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- new enquery form -->
+    <style type="text/css">
+    .captcha-image-form {
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .captcha-image-form .background-img {
+        background-image: url('assets/images/captcha.jpeg');
+        padding: 8px 42px;
+        font-weight: bold;
+    }
+
+    .bookappointmentpopup .countryUlist .nav-tabs li {
+        cursor: pointer;
+    }
+
+    @media(max-width:576px) {
+        .enq-form {
+            width: 500px
+        }
+    }
+
+    /*------------- Form ---------------*/
+    body {
+        background: #F1F4F6;
+    }
+
+    #tutoring {
+        display: block;
+    }
+
+    .center_part {
+        padding: 1rem 2rem;
+        background: #fff;
+    }
+
+    .fixed-callout img {
+        width: 24px;
+    }
+
+    #tutoring .desicontainer {
+        margin-top: 5px !important;
+    }
+
+    #tutoring .desicontainer .col-sm-12 {
+        padding: 0px !important;
+    }
+
+    .enq-form {
+        position: fixed;
+        z-index: 9999;
+        width: 280px;
+        background: #FFF;
+        left: -285px;
+        top: 62%;
+        transition: all .8s cubic-bezier(0.43, 1.07, 0.66, 1.15) .2s;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    /*.enq-form:hover{
+            left: 0px;
+          }*/
+    .formrotate {
+        transform: rotate(90deg);
+        position: absolute;
+        z-index: 555;
+        right: -135px;
+        top: 88px;
+        width: 80%;
+    }
+
+    .enq-form {
+        z-index: 999999999;
+    }
+
+    .enq-form.clickfomup {
+        left: 0;
+    }
+
+    .formoverlay.active {
+        content: "";
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgb(0 0 0 / 40%);
+        z-index: 99999;
+    }
+
+    .enq-form .user-icon {
+        position: absolute;
+        top: -40px;
+        right: -140px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 20px auto 15px;
+        border-radius: 100%;
+        background: #353E91;
+        text-align: center;
+        line-height: 50px;
+        font-size: 24px;
+        color: #fff;
+        box-shadow: 0px 2px 4px 0px #00000094;
+    }
+
+    .enq-form .title {
+        background: #353E91;
+        padding: 7px 10px 10px 20px !important;
+        color: #fff !important;
+        border-radius: 10px 10px 0 0;
+        font-size: 20px !important;
+        margin: 0;
+    }
+
+    .enq-form p.messageenqform {
+        position: relative;
+        color: #000;
+        font-size: 16px;
+        padding-left: 12px;
+        font-weight: 600;
+        margin: 10px 5px;
+        padding-bottom: 8px;
+    }
+
+    .enq-form p.messageenqform::before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 60px;
+        background: #353e91;
+        bottom: 0px;
+        border-radius: 5px;
+        left: 15px;
+    }
+
+    .enq-form button {
+        display: block;
+        margin: 12px auto;
+        height: 54px;
+        width: 54px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all .4s ease;
+        color: #fff !important;
+        border: none;
+        background: #353e91;
+        font-size: 22px;
+        margin-bottom: 0;
+        outline: none;
+    }
+
+    .enq-form select {
+        -webkit-appearance: none;
+        appearance: none;
+        background: #fff;
+    }
+
+    .enq-form button:hover {
+        background: #FF1A7D;
+        box-shadow: 1px 1px 3px #000;
+    }
+
+    .enq-form .group {
+        position: relative;
+        margin-bottom: 7px;
+    }
+
+    .enq-form form {
+        width: 96%;
+        margin: 10px auto;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    .enq-form input,
+    .enq-form select {
+        font-size: 14px;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        box-sizing: border-box;
+        border-bottom: 1px solid #757575b0;
+    }
+
+    .enq-form input:focus,
+    .enq-form select:focus {
+        outline: none;
+        border-bottom: none;
+    }
+
+    .enq-form input:focus~label,
+    .enq-form select:focus~label {
+        display: none !important;
+    }
+
+    .enq-form input:valid~label,
+    .enq-form select:valid~label {
+        display: none !important;
+    }
+
+    .enq-form label {
+        color: #999;
+        font-size: 14px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+        letter-spacing: 1px;
+    }
+
+    .enq-form .bar {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    .enq-form .bar:before,
+    .enq-form .bar:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 1px;
+        position: absolute;
+        background: #5264AE;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    .enq-form .bar:before {
+        left: 50%;
+    }
+
+    .enq-form .bar:after {
+        right: 50%;
+    }
+
+    .enq-form input:focus~.bar:before,
+    .enq-form input:focus~.bar:after {
+        width: 50%;
+    }
+
+    .enq-form select:focus~.bar:before,
+    .enq-form select:focus~.bar:after {
+        width: 50%;
+    }
+
+    .enq-form .highlight {
+        position: absolute;
+        height: 60%;
+        width: 100px;
+        top: 25%;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    .enq-form input:focus~.highlight {
+        -webkit-animation: inputHighlighter 0.3s ease;
+        -moz-animation: inputHighlighter 0.3s ease;
+        animation: inputHighlighter 0.3s ease;
+    }
+
+    .enq-form select:focus~.highlight {
+        -webkit-animation: inputHighlighter 0.3s ease;
+        -moz-animation: inputHighlighter 0.3s ease;
+        animation: inputHighlighter 0.3s ease;
+    }
+
+    @keyframes inputHighlighter {
+        from {
+            background: #5264AE;
+        }
+
+        to {
+            width: 0;
+            background: transparent;
+        }
+    }
+
+    .quickenquery_mobile {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        .enq-form {
+            left: 0;
+            bottom: -600px;
+            top: inherit;
+            left: 5px;
+            width: 210px;
+        }
+
+        .formrotate {
+            transform: rotate(0deg);
+            position: absolute;
+            z-index: 555;
+            right: inherit;
+            top: -45px;
+            width: 100%;
+        }
+
+        .enq-form p.messageenqform br {
+            display: none;
+        }
+
+        .enq-form:hover {
+            left: 10px;
+        }
+
+        .formslidup {
+            bottom: -200px;
+        }
+
+        .enq-form .bar:before,
+        .enq-form .bar:after {
+            background: #FF1A7D;
+        }
+
+        .enq-form .title {
+            background: #FF1A7D;
+            font-size: 18px !important;
+            padding: 10px 0px 10px 15px !important;
+        }
+
+        .enq-form .user-icon {
+            background: #FF1A7D;
+            right: -120px !important;
+            top: -35px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .enq-form p.messageenqform::before {
+            background: #FF1A7D;
+        }
+
+        .enq-form button {
+            background: #FF1A7D;
+        }
+
+        .enq-form button:hover {
+            background: #353e91;
+        }
+    }
+
+    .center_part {
+        background: #fff;
+    }
+
+    #tutoring {
+        display: block;
+    }
+    </style>
+
+    <div class="formoverlay"></div>
+    <div class="enq-form">
+        <div class="formrotate">
+            <p class="title">Quick Enquiry</p>
+            <label class="user-icon">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </label>
+        </div>
+        <p class="messageenqform">
+            Book Counsling Session With <br> Our Experts
+        </p>
+        <form action id="studentEnqMaster" name="studentEnqMaster" method="post">
+            <input type="hidden" name="pageurl"
+                value="https://www.ibtoverseas.com/assets/images/homePage/png/EAIE.png">
+            <div class="group">
+                <input name="master_student_name" type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Name</label>
+            </div>
+
+            <!-- <div class="group">
+                  <input name="master_student_email" type="email" required>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Email</label>
+                </div>   -->
+
+            <div class="group">
+                <input name="master_student_mobile" type="number" required placeholder="Phone Number with Country Code"
+                    minlength="10">
+                <!-- <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Mobile</label> -->
+            </div>
+
+            <div class="group">
+                <select name="master_student_country" style="color: #a2a2a2;" required>
+                    <option value="">Select Country</option>
+                    <option value="Canada">Canada</option>
+                    <option value="USA">USA</option>
+                    <option value="Australia">Australia</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Europe">Europe</option>
+                </select>
+                <!-- <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Select Country</label> -->
+            </div>
+
+            <div class="group">
+                <select name="master_student_visa_type" required style="color: #a2a2a2;">
+                    <option value="">Select Visa Type </option>
+                    <option value="Study Visa">Study Visa</option>
+                    <option value="Visitor Visa">Visitor Visa</option>
+                    <option value="Tourist Visa">Tourist Visa</option>
+                </select>
+                <!-- <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Select Visa Type </label> -->
+            </div>
+            <!-- <input type="submit" name="submit"> -->
+            <button type="submit">
+                <i class="fa fa-arrow-right" id="submitbtnid"></i>
+                <i class="fa fa-spinner" style="display: none;"></i>
+            </button>
+            <div id="masterEnqMsg"></div>
+        </form>
+    </div>
+    <!-- end enquery form -->
+
+    <div class="quickenquery_des" style="display: none;">
+        <a class="handle"
+            style="display: block; background-image: url(https://www.ibtoverseas.com/assets/images/contact_tab.png); background-repeat: no-repeat; width: 33px; height: 172px; text-indent: -99999px; outline: currentcolor none medium; position: absolute; top: 0px; right: -32px;"
+            href="javascript:void(0);">Content</a>
+        <label>Yes I'm Interested</label>
+        <!-- <form action="" method="post" id="studentEnqMaster" name="studentEnqMaster">
+<input name="master_student_name" type="text" placeholder="Name" required>
+<input name="master_student_email" type="email" placeholder="E-mail" required>
+<input name="master_student_mobile" type="number" placeholder="Mobile No." required>
+<select name="master_student_country" required>
+<option value="" > Select Country </option>
+<option value="Canada" >Canada</option>
+<option value="USA" >USA</option>
+<option value="UK" >UK</option>
+<option value="Australia" >Australia</option>
+<option value="Schengen" >Schengen</option>
+</select>
+
+<select name="master_student_visa_type" required>
+<option value="" > Select Visa Type </option>
+<option value="Study Visa" >Study Visa</option>
+<option value="Work Visa" >Work Visa</option>
+<option value="PR" >PR</option> 
+</select>
+
+<button type="submit">Submit</button>
+<div id="masterEnqMsg"></div>
+</form> -->
+
+    </div>
+
+    <div class="quickenquery_mobile">
+        <span><a href="https://www.ibtoverseas.com/students-enquiry">Quick Enquiry</a></span>
+    </div>
+
+
+    <style>
+  .mobile-navbar-main{
+background:#fff;
+padding:10px 0;
+}
+
+.mobile_nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.mobile_nav-left,
+.mobile_nav-right{
+width:20%;
+}
+
+.mobile_nav-center{
+width:60%;
+text-align:center;
+}
+
+.mobile_nav-logo img{
+max-height:45px;
+width:auto;
+}
+
+.navbar-toggle{
+border:none;
+background:transparent;
+}
+
+.icon-bar{
+background:#000;
+}
+
+@media(max-width:576px){
+
+.mobile_nav-logo img{
+max-height:40px;
+}
+
+}
+  </style>
+  <div class="mobile-navbar-main" style="margin-top: -23px;">
+<div class="container"style="padding-left: 0px!important;">
+
+<div class="mobile_nav">
+
+<!-- LEFT MENU BUTTON -->
+<div class="mobile_nav-left">
+<button type="button" class="navbar-toggle collapsed"
+data-toggle="collapse"
+data-target="#bs-example-navbar-collapse-1">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+
+<!-- LOGO -->
+<div class="mobile_nav-center">
+<a class="mobile_nav-logo" href="https://www.ibtoverseas.com/index.html">
+<img src="https://www.ibtoverseas.com/assets/images/logo.svg">
+</a>
+</div>
+
+<!-- RIGHT MENU BUTTON -->
+<div class="mobile_nav-right">
+<button type="button" class="navbar-toggle collapsed"
+data-toggle="collapse"
+data-target="#bs-example-navbar-collapse-1one">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+
+</div>
+
+
+<!-- LEFT MENU -->
+<nav class="navbar navbar-default1">
+<div class="collapse navbar-collapse nav-left-menu"
+id="bs-example-navbar-collapse-1">
+
+<ul class="nav navbar-nav1">
+
+
+<li>
+<a href="faq">
+Faq's</a>
+</li>
+
+
+<li>
+<a href="ibt-careers">
+Career</a>
+</li>
+
+
+</ul>
+
+</div>
+</nav>
+
+
+<!-- RIGHT MENU -->
+<nav class="navbar navbar-default">
+
+<div class="collapse navbar-collapse"
+id="bs-example-navbar-collapse-1one">
+
+<ul class="nav navbar-nav navbar-right">
+
+<li>
+<a href="https://www.ibtoverseas.com/index.html">
+<i class="fa fa-home"></i>
+</a>
+</li>
+
+
+<li>
+<a href="https://www.ibtoverseas.com/licenses">
+Licence and Certificates</a>
+</li>
+
+
+<li class="dropdown">
+
+<a href="#" class="dropdown-toggle"
+data-toggle="dropdown">
+
+About<span class="caret"></span>
+
+</a>
+
+<ul class="dropdown-menu">
+
+
+<li>
+<a href="about-us">
+About Us</a>
+</li>
+
+
+<li>
+<a href="privacy-policy">
+Privacy Policy</a>
+</li>
+
+
+<li>
+<a href="disclaimer.html">
+Disclaimer</a>
+</li>
+
+
+<li>
+<a href="https://www.ibtoverseas.com/mission-and-vision.html">
+Mission and Vision</a>
+</li>
+
+
+<li>
+<a href="https://www.ibtoverseas.com/refund-policy.html">
+Refund Policy</a>
+</li>
+
+
+<li>
+<a href="https://www.ibtoverseas.com/student-financial-protection.html">
+Student Financial Protection</a>
+</li>
+
+
+<li>
+<a href="non-discrimination-policy">
+Non - Discrimination Policy</a>
+</li>
+
+
+</ul>
+
+</li>
+
+
+<li class="dropdown">
+
+<a href="#" class="dropdown-toggle"
+data-toggle="dropdown">
+
+Study Visa<span class="caret"></span>
+
+</a>
+
+<ul class="dropdown-menu">
+
+
+<li>
+<a href="https://www.ibtoverseas.com/best-usa-study-visa-consultants-in-jalandhar">
+USA</a>
+</li>
+
+
+<li>
+<a href="https://www.ibtoverseas.com/best-canada-study-visa-consultants-in-jalandhar">
+Canada</a>
+</li>
+
+
+<li>
+<a href="https://www.ibtoverseas.com/best-uk-study-visa-consultants-in-jalandhar">
+United Kingdom</a>
+</li>
+
+
+<li>
+<a href="https://www.ibtoverseas.com/best-australia-study-visa-consultants-in-jalandhar">
+Australia</a>
+</li>
+
+
+<li>
+<a href="https://www.ibtoverseas.com/best-new-zealand-study-visa-consultants-in-jalandhar">
+New Zealand</a>
+</li>
+
+
+<li>
+<a href="https://www.ibtoverseas.com/best-europe-study-visa-consultants-in-jalandhar">
+Europe</a>
+</li>
+
+
+</ul>
+
+</li>
+
+
+<li>
+<a href="students-enquiry">
+Visa Enquiry</a>
+</li>
+
+
+<li>
+<a href="visa-stamped">
+Visa Stamped</a>
+</li>
+
+
+<li>
+<a href="contactus">
+Contact</a>
+</li>
+
+
+<li>
+<a href="https://www.ibtoverseas.com/partnership-enquiry">
+Partnership Enquiry</a>
+</li>
+
+
+<li class="search-btn">
+
+<a href="#" class="button-click">
+<i class="fa fa-search"></i>
+</a>
+
+<div class="search-wrap">
+
+<form method="get">
+
+<input type="text" placeholder="Search">
+
+<button>
+<img src="https://www.ibtoverseas.com/assets/images/search-icon.png">
+</button>
+
+</form>
+
+</div>
+
+</li>
+
+</ul>
+
+</div>
+
+</nav>
+
+</div>
+</div>    <header>
+        <style type="text/css">
+  header .navbar-main .navbar-brand img{
+    width: 100px;
+  }
+  .ratingstar {
+    border: none;
+    margin: auto;
+    cursor: pointer;
+width: fit-content;
+}
+.pagefeedmodal .foundinfo {
+    padding: 30px 0;
+}
+.pagefeedmodal .foundinfo .btn-outline-primary {
+    font-size: 12px;
+    text-transform: uppercase;
+    border-color: #30428F !important;
+    color: #30428F !important;
+    margin: 0 4px;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.pagefeedmodal .foundinfo {
+    padding: 30px 0;
+}
+.pagefeedmodal .foundinfo textarea {
+    width: 100%;
+    resize: none;
+    margin: auto;
+    outline: none;
+    display: block;
+    margin-bottom: 10px;
+    border-color: #ddd;
+    padding: 8px 15px;
+}
+.w-100{
+  width: 100% !important;
+}
+.viewhover.btnfill {
+    background: #24438C;
+}
+.pagefeedmodal {
+  top: 20%;
+}
+.pagefeedmodal .modal-header {
+    background: #337ab7;
+    color: #fff;
+}
+.pagefeedmodal .modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 22px;
+    /* margin-right: 13px; */
+    padding: 11px 3px 12px 16px;
+}
+.pagefeedmodal .modal-header .close {
+    color: #fff !important;
+    outline: none;
+}
+.close:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.pagefeedmodal .modal-header .close {
+  padding: 1rem;
+    /* margin: -1rem -1rem -1rem auto; */
+    margin: 0px;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    font-size: 25px;
+}
+#feedbackfrm button{
+  height: 39px;
+      margin-left: 0px;
+}
+.pagefeedmodal .foundinfo {
+    padding: 14px 0 !important;
+}
+</style>
+
+
+
+
+<!-- feedback modal section -->
+<div class="modal fade pagefeedmodal" id="pagefeedback" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Feedback</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form name="feedbackfrm" id="feedbackfrm">
+      <input type="hidden" name="user_id" value="">
+      <input type="hidden" name="page_id" value="">
+      <div class="modal-body signUpform" style="width:90%">
+        <div>
+          <h4 class="mb-1">Was this page is helpful ?</h4>
+          <fieldset class="ratingstar"  style="width:fit-content">
+          <input type="radio" id="star5" name="rating" value="5"   /><label class = "full" for="star5"></label>
+          <input type="radio" id="star4half" name="rating" value="4 and a half"  /><label class="half" for="star4half">
+          </label>
+          <input type="radio" id="star4" name="rating" value="4"  /><label class = "full" for="star4"></label>
+          <input type="radio" id="star3half" name="rating" value="3 and a half"  /><label class="half" for="star3half">
+          </label>
+          <input type="radio" id="star3" name="rating" value="3"  /><label class = "full" for="star3"></label>
+          <input type="radio" id="star2half" name="rating" value="2 and a half"  /><label class="half" for="star2half">
+          </label>
+          <input type="radio" id="star2" name="rating" value="2"  /><label class = "full" for="star2"></label>
+          <input type="radio" id="star1half" name="rating" value="1 and a half"  /><label class="half" for="star1half">
+          </label>
+          <input type="radio" id="star1" name="rating" value="1"  /><label class = "full" for="star1"></label>
+          <input type="radio" id="starhalf" name="rating" value="half"  /><label class="half" for="starhalf"></label>
+          </fieldset>
+          <div class="text-center">Yes, absolutely</div>
+          <div class="foundinfo text-center">
+          <h4 class="text-center">I found the page information</h4>
+            <input type="checkbox" name="ttype[]" class="btn btn-outline-primary" value="1" checked="">Complete
+            <input type="checkbox" name="ttype[]" class="btn btn-outline-primary" value="2">Easy to read
+            <input type="checkbox" name="ttype[]" class="btn btn-outline-primary" value="3">Up to date
+          </div>
+          <div class="foundinfo text-left pt-0">
+            <h4>Any suggestions or input for IBT</h4>
+            <textarea rows="2" name="feedback" id="feedback" class="resize-none" placeholder="Please Type.." required=""></textarea>
+            <button type="submit" class="btn viewhover btnfill text-white btn-block submit w-100 m-0" name="feedbackbtn" style="font-size:16px;">SUBMIT</button>
+            <span class="feedback_message" style="color: red;"></span>
+          </div>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<header>
+  <div class="headtopmain">
+    <div class="container left">
+      <div class="col-xs-12 col-sm-5 topright"> <span><a href="tel:+91-8677812345"><i class="fa fa-phone" aria-hidden="true"></i> : +91-8677812345</a></span> <span><a href="mailto:admin@ibtoverseas.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> : admin@ibtoverseas.com</a></span>
+
+
+                     
+                   
+                   
+                   
+                   
+    
+     </div>
+      <div class="col-xs-12 col-sm-7 text-right">
+        <nav class="navbar navbar-default"> 
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                            				<li><a href="faq" target="">Faq's</span></a></li>
+              	              				<li><a href="ibt-careers" target="">Career</span></a></li>
+              	            </ul>
+            </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-main">
+    <div class="container">
+      <nav class="navbar navbar-default"> 
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1one" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <a class="navbar-brand" href="https://www.ibtoverseas.com/">
+            <img src="https://www.ibtoverseas.com/assets/images/logo.svg" alt="ibt logo">
+          </a>
+
+            <!-- <a class="navbar-brand" href=""><img src="" alt="ibt logo"></a> -->
+
+           </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1one">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://www.ibtoverseas.com/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                                    
+              				<li><a href="https://www.ibtoverseas.com/licenses" target="">
+                            	
+							             Licence and Certificates                          
+                        </a>
+                                          
+                  </li>
+                                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">  About <span class="caret"></span></a>
+				                <ul class="dropdown-menu ">
+				                  				                  	<li><a href="about-us" target="">About Us</a></li>
+				                  				                  	<li><a href="privacy-policy" target="">Privacy Policy</a></li>
+				                  				                  	<li><a href="disclaimer.html" target="">Disclaimer</a></li>
+				                  				                  	<li><a href="https://www.ibtoverseas.com/mission-and-vision.html" target="">Mission and Vision</a></li>
+				                  				                  	<li><a href="https://www.ibtoverseas.com/refund-policy.html" target="">Refund Policy</a></li>
+				                  				                  	<li><a href="https://www.ibtoverseas.com/student-financial-protection.html" target="">Student Financial Protection</a></li>
+				                  				                  	<li><a href="non-discrimination-policy" target="">Non - Discrimination Policy</a></li>
+				                  					                  
+				                </ul>
+			                </li>
+              			                      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">  Study Visa <span class="caret"></span></a>
+				                <ul class="dropdown-menu ">
+				                  				                  	<li><a href="https://www.ibtoverseas.com/best-usa-study-visa-consultants-in-jalandhar" target="">USA</a></li>
+				                  				                  	<li><a href="https://www.ibtoverseas.com/best-canada-study-visa-consultants-in-jalandhar" target="">Canada</a></li>
+				                  				                  	<li><a href="https://www.ibtoverseas.com/best-uk-study-visa-consultants-in-jalandhar" target="">United Kingdom</a></li>
+				                  				                  	<li><a href="https://www.ibtoverseas.com/best-australia-study-visa-consultants-in-jalandhar" target="">Australia</a></li>
+				                  				                  	<li><a href="https://www.ibtoverseas.com/best-new-zealand-study-visa-consultants-in-jalandhar" target="">New Zealand</a></li>
+				                  				                  	<li><a href="https://www.ibtoverseas.com/best-europe-study-visa-consultants-in-jalandhar" target="">Europe</a></li>
+				                  					                  
+				                </ul>
+			                </li>
+              			                        
+              				<li><a href="students-enquiry" target="">
+                            	
+							             Visa Enquiry                          
+                        </a>
+                                          
+                  </li>
+                                  
+              				<li><a href="visa-stamped" target="">
+                            	
+							             Visa Stamped                          
+                        </a>
+                                          
+                  </li>
+                                  
+              				<li><a href="contactus" target="">
+                            	
+							             Contact                          
+                        </a>
+                                          
+                  </li>
+                                  
+              				<li><a href="https://www.ibtoverseas.com/partnership-enquiry" target="">
+                            	
+							             Partnership Enquiry                          
+                        </a>
+                                          
+                  </li>
+                      <li><a href="#" class="button-click"><i class="fa fa-search" aria-hidden="true"></i></a>
+            <div class="search-wrap">
+            <form action="https://www.ibtoverseas.com/search" method="get">
+            <input name="search_content" type="text" placeholder="Search" required>
+            <button><img src="https://www.ibtoverseas.com/assets/images/search-icon.png" alt="enter button"></button>
+            <i class="fa fa-times search-click" aria-hidden="true"></i>
+            </form>
+            </div>
+            </li>
+
+            
+          </ul>
+        </div>
+       </nav>
+    </div>
+  </div>
+
+
+  </header> 
+
+
+
+
+
+
+ 
+     </header>
+
+    
+
+
+    <div class="clearfix"></div>
+<div class="main_container" style="margin: 100px auto;">
+    <div class="col-md-12">
+    	<div class="col-middle">
+    		<div class="text-center text-center">
+    			<h1 class="error-number" style="font-size: 150px;">404</h1>
+    			<h2 style="font-size: 48px;">Sorry but we couldn't find this page</h2>
+<!--     			<p> -->
+<!--     				This page you are looking for does not exist <a href="#">Report -->
+<!--     					this?</a> -->
+<!--     			</p> -->
+    		</div>
+    	</div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+    <style type="text/css">
+    .latest_news .owl-nav,
+    .latest_news .owl-dots {
+        display: none !important;
+    }
+
+    .bottom_popup {
+        width: 450px;
+        height: 190px;
+        position: fixed;
+        z-index: 999;
+        animation: btpopup ease 2s;
+        transition: all linear 2s;
+        display: none;
+    }
+
+    @keyframes btpopup {
+        0% {
+            transform: translateY(800px);
+        }
+
+        80% {
+            transform: translateY(100px);
+            transform: scale(.80);
+        }
+
+        100% {
+            transform: translateY(0px);
+            transform: scale(1);
+        }
+    }
+
+    .bottom_popup .add-close {
+        position: absolute;
+        right: -18px;
+        top: -16px;
+        font-size: 21px;
+    }
+
+    .center {
+        right: 0 !important;
+        top: 0;
+        bottom: 20%;
+        margin: auto;
+    }
+
+    .center,
+    .left {
+        left: 0 !important;
+    }
+
+    .bottom_popup .add-close a {
+        color: #9e2828;
+    }
+
+    .bottom_popup .add-close a:hover {
+        color: #015198
+    }
+
+    .left .add-close {
+        right: -18px !important;
+        left: auto;
+        cursor: pointer;
+    }
+
+    .add-close i {
+        border: 1px solid #ccc;
+        font-size: 14px;
+        padding: 5px 6Px;
+        border-radius: 50%;
+        background: red;
+        color: #fff;
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .bottom_popup {
+            width: 250px;
+        }
+
+        .center {
+            right: 44%;
+        }
+    }
+    </style>
+
+    <div class="bottom_popup center" id="bottomPopup">
+        <a href="https://www.ibtenglish.in/students-enquiry">
+            <img src="https://www.ibtoverseas.com/assets/images/popupimg.png" class="img-responsive">
+        </a>
+        <div class="add-close">
+            <a href="javascript:void(0);" class="closeBottomPopup">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <style type="text/css">
+  .footer .footlinks ul{
+    list-style: disc;
+  }
+  .footer .footlinks ul li{
+    width: 100%;
+  }
+</style>
+
+<section>
+  <div class="footer" style="background-image:url('https://www.ibtoverseas.com/assets/images/footer-bg.png');">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="about_ibt" style="margin-top:0;">
+                <img src="https://www.ibtoverseas.com/assets/images/footer-logo.png" alt="ibt logo" style="width:75px;margin-bottom: 6px;">
+                <a href="https://www.airc-education.org/airc-certified-agencies" target="_blank"><img src="https://www.ibtoverseas.com/assets/images/homePage/png/AIRC.png" alt="AIRC logo" style="width:40px;margin-bottom: 6px; margin-left:10px"></a>
+                <blockquote>IBT Overseas forte lies in offering complete guidance so that study abroad aiming students will have complete knowledge about how they can study on an international level. Being a well known guidance providing source, we help every student who aims to study in countries like Australia, Canada, New Zealand, Europe and the UK.</blockquote>
+            </div>
+            
+            <div class="social_media">
+                <label>Connect With Us</label> 
+                <ul>
+                  <li>
+                    <a href="https://www.facebook.com/ibtoverseas" target="_blank">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/ibtoverseas/" target="_blank">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/@ibtoverseasjalandhar" target="_blank">
+                      <i class="fa fa-youtube" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://x.com/ibtoverseas" target="_blank">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <!-- <li>
+                    <a href="javascript:void(0)">
+                      <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                  </li> -->
+                </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="ibt_address">
+              <div style="margin-bottom: 20px;">
+                <label>Corporate Office</label>
+                <p>1st Floor, C-1,2, Near Nirman vihar metro station, Laxmi Nagar, Delhi.</p>
+              </div>
+               <div>
+                <label>Head Office</label>
+                <p>Crystal Plaza, SCO-69, Garha Rd, opposite PIMS Hospital, Chhoti Barandari II, Jalandhar, Punjab 144003, India</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 col-12">
+            <div class="footlinks">
+                <label>Quick Links</label>
+                <ul>
+                                       <li><a href="https://www.ibtoverseas.com/immigration-consultants-in-jalandhar" target="_blank">Immigration Consultants in Jalandhar</a></li>
+                                      <li><a href="https://www.ibtoverseas.com/immigration-consultants-in-ludhiana" target="_blank">Immigration Consultants in Ludhiana</a></li>
+                                      <li><a href="https://www.ibtoverseas.com/immigration-consultants-in-chandigarh" target="_blank">Immigration Consultants in Chandigarh</a></li>
+                                      <li><a href="https://www.ibtoverseas.com/immigration-consultants-in-bathinda" target="_blank">Immigration Consultants in Bathinda</a></li>
+                                      <li><a href="https://www.ibtoverseas.com/best-uk-study-visa-consultants-in-jalandhar" target="_blank">UK Study Visa Consultants in Jalandhar</a></li>
+                                      <li><a href="https://www.ibtoverseas.com/best-uk-study-visa-consultants-in-chandigarh" target="_blank">UK Study Visa Consultants in Chandigarh</a></li>
+                                  </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+    <div id="enqModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="text-center bookapoitment">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Book an Appointment</h4>
+                </div>
+                <div class="modal-body homecontactform bookappointmentpopup">
+
+                    <div class="outer-book-apointment outer-book-apointment-popup">
+                        <div class="countryUlist text-center">
+                            <ul class="nav nav-tabs">
+                                <li class="active" data-id="walkinpopup"><a data-id="walkinpopup">walk in</a></li>
+                                <li data-id="videocallpopup"><a data-id="videocallpopup">live call</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div id="walkinpopup" class="tab-pane fade in active">
+                                <div class="row">
+                                    <div class="eligibility-form">
+                                        <form action="" method="post" id="studentEnqMasterHome1"
+                                            name="studentEnqMasterHome1">
+                                            <input type="hidden" name="getCaptchaId" value="captchaInput3">
+                                            <input type="hidden" name="pageurl"
+                                                value="https://www.ibtoverseas.com/assets/images/homePage/png/EAIE.png">
+                                            <input type="hidden" name="booking_type" id="booking_type" value="1">
+                                            <div class="col-sm-12 col-xs-12">
+                                                <div class="form-group">
+                                                    <input placeholder="Name" type="text" class="form-control"
+                                                        id="master_student_name" name="master_student_name" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-xs-12">
+                                                <div class="form-group">
+                                                    <input placeholder="Phone Number with Country Code" minlength="10"
+                                                        type="text" class="form-control" id="master_student_mobile"
+                                                        name="master_student_mobile" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12 padding-r-1">
+                                                <div class="form-group">
+                                                    <select class="form-control" id="master_student_country"
+                                                        name="master_student_country" required>
+                                                        <option value="">Select Country</option>
+                                                        <option value="USA">USA</option>
+                                                        <option value="Canada">Canada</option>
+                                                        <option value="Australia">Australia</option>
+                                                        <option value="New Zealand">New Zealand</option>
+                                                        <option value="United Kingdom">United Kingdom</option>
+                                                        <option value="Europe">Europe</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12 padding-l-1">
+                                                <div class="form-group">
+                                                    <select class="form-control" id="master_student_visa_type"
+                                                        name="master_student_visa_type" required>
+                                                        <option value="">Visa Type</option>
+                                                        <option value="Study Visa">Study Visa</option>
+                                                        <option value="Visitor Visa">Visitor Visa</option>
+                                                        <option value="Tourist Visa">Tourist Visa</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12 padding-r-1">
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control date-padding-right"
+                                                        name="master_student_date" id="master_student_date"
+                                                        value="2026-06-19"
+                                                        min="2026-06-19"
+                                                        max="2027-06-18">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12 padding-l-1">
+                                                <div class="form-group">
+                                                    <select class="form-control" name="master_student_time_slot"
+                                                        id="master_student_time_slot" required>
+                                                        <option value="">Any Time Between</option>
+                                                        <option>9 AM - 11 AM</option>
+                                                        <option>11 AM - 01 PM</option>
+                                                        <option>02 PM - 04 PM</option>
+                                                        <option>04 PM - 06 PM</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12 captcha-image-form">
+                                                <div class="form-group">
+                                                    <div class="captcha-image">
+                                                        <span id="captchaInput3" class="background-img"></span> <button
+                                                            type="button" onclick="refreshCaptchaBtn('captchaInput3')"
+                                                            style="background: none !important;color: black !important;border: none;"><i
+                                                                class="fa fa-refresh"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12 padding-l-1">
+                                                <div class="form-group">
+                                                    <input type="text" name="captcha" id="captchaInput3s"
+                                                        placeholder="Enter Captcha Here..."
+                                                        class="form-control captchaInput3" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 text-center">
+                                                <button type="submit" class="btn btn-default">
+                                                    <span id="submitbtnidIndex1">Submit</span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                        <div id="masterEnqMsgHome1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="videocallpopup" class="tab-pane fade">
+                                <div class="row">
+                                    <div class="eligibility-form">
+                                        <form action="" method="post" id="studentEnqMasterHome2"
+                                            name="studentEnqMasterHome2">
+                                            <input type="hidden" name="getCaptchaId" value="captchaInput4">
+                                            <input type="hidden" name="pageurl"
+                                                value="https://www.ibtoverseas.com/assets/images/homePage/png/EAIE.png">
+                                            <input type="hidden" name="booking_type" id="booking_type" value="2">
+                                            <div class="col-sm-12 col-xs-12">
+                                                <div class="form-group">
+                                                    <input placeholder="Name" type="text" class="form-control"
+                                                        id="master_student_name" name="master_student_name" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-xs-12">
+                                                <div class="form-group">
+                                                    <input placeholder="Phone Number with Country Code" minlength="10"
+                                                        type="text" class="form-control" id="master_student_mobile"
+                                                        name="master_student_mobile" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12 padding-r-1">
+                                                <div class="form-group">
+                                                    <select class="form-control" id="master_student_country"
+                                                        name="master_student_country" required>
+                                                        <option value="">Select Country</option>
+                                                        <option value="Canada">Canada</option>
+                                                        <option value="USA">USA</option>
+                                                        <option value="Australia">Australia</option>
+                                                        <option value="New Zealand">New Zealand</option>
+                                                        <option value="United Kingdom">United Kingdom</option>
+                                                        <option value="Europe">Europe</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12 padding-l-1">
+                                                <div class="form-group">
+                                                    <select class="form-control" id="master_student_visa_type"
+                                                        name="master_student_visa_type" required>
+                                                        <option value="">Visa Type</option>
+                                                        <option value="Study Visa">Study Visa</option>
+                                                        <option value="Visitor Visa">Visitor Visa</option>
+                                                        <option value="Tourist Visa">Tourist Visa</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12 padding-r-1">
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control date-padding-right"
+                                                        name="master_student_date" id="master_student_date"
+                                                        value="2026-06-19"
+                                                        min="2026-06-19"
+                                                        max="2027-06-18">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12 padding-l-1">
+                                                <div class="form-group">
+                                                    <select class="form-control" name="master_student_time_slot"
+                                                        id="master_student_time_slot" required>
+                                                        <option value="">Time Slot</option>
+                                                        <option id='09:00 AM - 09:15 AM'>09:00 AM - 09:15 AM</option>
+                                                        <option id='09:15 AM - 09:30 AM'>09:15 AM - 09:30 AM</option>
+                                                        <option id='09:30 AM - 09:45 AM'>09:30 AM - 09:45 AM</option>
+                                                        <option id='09:45 AM - 10:00 AM'>09:45 AM - 10:00 AM</option>
+                                                        <option id='10:00 AM - 10:15 AM'>10:00 AM - 10:15 AM</option>
+                                                        <option id='10:15 AM - 10:30 AM'>10:15 AM - 10:30 AM</option>
+                                                        <option id='10:30 AM - 10:45 AM'>10:30 AM - 10:45 AM</option>
+                                                        <option id='10:45 AM - 11:00 AM'>10:45 AM - 11:00 AM</option>
+                                                        <option id='11:00 AM - 11:15 AM'>11:00 AM - 11:15 AM</option>
+                                                        <option id='11:15 AM - 11:30 AM'>11:15 AM - 11:30 AM</option>
+                                                        <option id='11:30 AM - 11:45 AM'>11:30 AM - 11:45 AM</option>
+                                                        <option id='11:45 AM - 12:00 AM'>11:45 AM - 12:00 AM</option>
+                                                        <option id='12:00 AM - 12:15 PM'>12:00 AM - 12:15 PM</option>
+                                                        <option id='12:15 PM - 12:30 PM'>12:15 PM - 12:30 PM</option>
+                                                        <option id='12:30 PM - 12:45 PM'>12:30 PM - 12:45 PM</option>
+                                                        <option id='12:45 PM - 01:00 PM'>12:45 PM - 01:00 PM</option>
+                                                        <option id='01:00 PM - 01:15 PM'>01:00 PM - 01:15 PM</option>
+                                                        <option id='01:15 PM - 01:30 PM'>01:15 PM - 01:30 PM</option>
+                                                        <option id='01:30 PM - 01:45 PM'>01:30 PM - 01:45 PM</option>
+                                                        <option id='01:45 PM - 02:00 PM'>01:45 PM - 02:00 PM</option>
+                                                        <option id='02:00 PM - 02:15 PM'>02:00 PM - 02:15 PM</option>
+                                                        <option id='02:15 PM - 02:30 PM'>02:15 PM - 02:30 PM</option>
+                                                        <option id='02:30 PM - 02:45 PM'>02:30 PM - 02:45 PM</option>
+                                                        <option id='02:45 PM - 03:00 PM'>02:45 PM - 03:00 PM</option>
+                                                        <option id='03:00 PM - 03:15 PM'>03:00 PM - 03:15 PM</option>
+                                                        <option id='03:15 PM - 03:30 PM'>03:15 PM - 03:30 PM</option>
+                                                        <option id='03:30 PM - 03:45 PM'>03:30 PM - 03:45 PM</option>
+                                                        <option id='03:45 PM - 04:00 PM'>03:45 PM - 04:00 PM</option>
+                                                        <option id='04:00 PM - 04:15 PM'>04:00 PM - 04:15 PM</option>
+                                                        <option id='04:15 PM - 04:30 PM'>04:15 PM - 04:30 PM</option>
+                                                        <option id='04:30 PM - 04:45 PM'>04:30 PM - 04:45 PM</option>
+                                                        <option id='04:45 PM - 05:00 PM'>04:45 PM - 05:00 PM</option>
+                                                        <option id='05:00 PM - 05:15 PM'>05:00 PM - 05:15 PM</option>
+                                                        <option id='05:15 PM - 05:30 PM'>05:15 PM - 05:30 PM</option>
+                                                        <option id='05:30 PM - 05:45 PM'>05:30 PM - 05:45 PM</option>
+                                                        <option id='05:30 PM - 05:45 PM'>05:45 PM - 06:00 PM</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12 captcha-image-form">
+                                                <div class="form-group">
+                                                    <div class="captcha-image">
+                                                        <span id="captchaInput4" class="background-img"></span> <button
+                                                            type="button" onclick="refreshCaptchaBtn('captchaInput4')"
+                                                            style="background: none !important;color: black !important;border: none;"><i
+                                                                class="fa fa-refresh"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12 padding-l-1">
+                                                <div class="form-group">
+                                                    <input type="text" name="captcha" id="captchaInput4s"
+                                                        placeholder="Enter Captcha Here..."
+                                                        class="form-control captchaInput4" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 text-center">
+                                                <button type="submit" class="btn btn-default">
+                                                    <span id="submitbtnidIndex2">Submit</span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                        <div id="masterEnqMsgHome2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div id="enqModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body homecontactform bookappointmentpopup">   
+        <div class="outer-book-apointment outer-book-apointment-popup">
+         <div class="tab-content">            
+           <a href="https://docs.google.com/forms/d/e/1FAIpQLScYOQu52tFEJMiCn8Meqcta72XMKNLoIPkVBPEFyIb1G8OaZw/viewform?vc=0&c=0&w=1&flr=0" target="_blank"><img src="https://www.ibtoverseas.com/assets/images/bookappointment.jpeg" style="height: auto !important; max-width: 100%;"></a>
+         </div>
+      </div>
+      </div>
+    </div>
+</div>
+</div> -->
+
+    
+    <style type="text/css">
+    .loginPopup .modal-dialog {
+        transition: transform .6s ease-out !important;
+    }
+
+    .loginPopup {
+        z-index: 9999 !important;
+        top: 100px;
+    }
+
+    .loginPopup .modal-body {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 4px solid #007FC9;
+    }
+
+    .loginPopup form {
+        position: relative;
+        padding: 0px 40px 20px;
+        width: 100%;
+    }
+
+    .loginPopup form input,
+    .loginPopup form .btn,
+    .loginPopup form select,
+    .loginPopup .close {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .loginPopup .close {
+        box-shadow: none !important;
+        outline: none !important;
+        opacity: 10 !important;
+        line-height: 2;
+    }
+
+    .loginPopup .close span {
+        color: #fff;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    .loginPopup .close span:hover {
+        color: red !important;
+    }
+
+    .loginPopup form h2 {
+        font-size: 22px;
+        color: #555;
+        text-align: center;
+        margin: 30px 0 20px;
+    }
+
+    .loginPopup figure {
+        margin: 0;
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 50%;
+        z-index: 99;
+    }
+
+    .loginPopup form input::-webkit-outer-spin-button,
+    .loginPopup form input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .loginPopup form .input-group-text {
+        background: #fff !important;
+    }
+
+    .loginPopup form .input-group-addon {
+        background: #fff !important;
+    }
+
+    .loginPopup form .btn {
+        padding: 8px;
+        margin-top: 8px;
+        text-transform: uppercase;
+    }
+
+    .loginPopup .w-100 {
+        width: 100% !important;
+    }
+
+    .loginPopup .mb-2 {
+        margin-bottom: .5rem !important;
+    }
+
+    .loginPopup .modal-header {
+        background: #007FC9;
+        padding: 20px !important;
+    }
+
+    .outer-book-apointment-popup {
+        margin-top: 15px !important;
+    }
+
+    @media (min-width: 768px) {
+        .loginPopup .modal-dialog {
+            width: 340px !important;
+        }
+
+        .outer-book-apointment-popup {
+            margin-top: 0px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .loginPopup form {
+            padding: 30px 10px 15px !important;
+        }
+
+        .loginPopup form h2 {
+            margin-top: 0;
+        }
+
+        .outer-book-apointment-popup {
+            margin-top: 0px;
+        }
+    }
+    </style>
+
+    <script>
+    //  $(document).ready(function () {
+    //   var bottomPopupIDD="5";
+    //     if(localStorage.getItem("landingBottomPopup"+bottomPopupIDD)) {
+    //         $("#bottomPopupP").hide();
+    //     }else{
+    //       setTimeout(function(){
+    //        $("#bottomPopupP").modal('show');
+    //       }, 10000);
+
+    //     }
+    //     $('.closeBottomPopupP').on('click', this, function () {
+    //       $("#bottomPopup").hide();
+    //       localStorage.setItem("landingBottomPopup"+bottomPopupIDD, "true");
+    //     }); 
+
+
+    // });
+
+    $("#homeForm").submit(function(e) {
+        var bottomPopupIDD = "5";
+        $('.homesubtn').html('Waiting...');
+        var payload = $('form[name="homeForm"]').serializeObject();
+        var data = {
+            'acid': 'home-enquiry',
+            'payload': JSON.stringify(payload)
+        }
+        AjaxRequest.startAjaxRequest(data, BASE_URL + 'public/ajax').done(function(response) {
+            if (response.flag == 1) {
+                localStorage.setItem("landingBottomPopup" + bottomPopupIDD, "true");
+                $('.homesubtn').html('Done');
+                window.location = BASE_URL + "thanks";
+
+            } else {
+                $('#error_msg').html(response.message);
+                $('.homesubtn').html('Submit');
+            }
+            //console.log(response);
+        });
+
+        e.preventDefault();
+    });
+    </script>
+
+    <script>
+    $(document).ready(function() {
+        var bottomPopupID = "";
+        if (localStorage.getItem("landingBottomPopup" + bottomPopupID)) {
+            $("#bottomPopup").hide();
+        } else {
+            //$("#bottomPopup").show();
+
+        }
+        $('.closeBottomPopup').on('click', this, function() {
+            $("#bottomPopup").hide();
+            localStorage.setItem("landingBottomPopup" + bottomPopupID, "true");
+        });
+    });
+
+    $(document).ready(function() {
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            margin: 17,
+            nav: true,
+            navText: ["<", ">"],
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+
+
+        var owl = $('.owl-carousel-one');
+        owl.owlCarousel({
+            margin: 17,
+            nav: true,
+            navText: ["<", ">"],
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        });
+
+
+        var owl = $('.owl-carousel-two');
+        owl.owlCarousel({
+            margin: 17,
+            nav: true,
+            navText: ["<", ">"],
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 2
+                }
+            }
+        });
+    })
+    </script>
+    <script>
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 250) {
+            $(".navbar-main").addClass("darkHeader");
+        } else {
+            $(".navbar-main").removeClass("darkHeader");
+        }
+    });
+    </script>
+
+
+    <script>
+    $(".button-click").click(function() {
+        $(".search-wrap").addClass("display-block");
+    });
+
+    $(".search-click").click(function() {
+        $(".search-wrap").removeClass("display-block");
+    });
+    </script>
+
+    <script>
+    $(".dropdown-menu li a").click(function() {
+        var selText = $(this).text();
+        $(this).parents('.btn-group').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+        $('.btn-group').removeClass('open');
+    });
+
+    $("#btnSearch").click(function() {
+        alert($('.btn-select').text() + ", " + $('.btn-select2').text());
+    });
+    </script>
+
+
+    <script>
+    $(".navbar-header2").click(function() {
+        $("#bs-example-navbar-collapse-1").removeClass("in");
+    });
+
+    $(".navbar-header1").click(function() {
+        $("#bs-example-navbar-collapse-1one").removeClass("in");
+    });
+
+    $(".close-tabe1").click(function() {
+        $("#bs-example-navbar-collapse-1").removeClass("in");
+    });
+    </script>
+    <script>
+    if ($(window).width() <= 1199) {
+
+    } else {
+        //alert('laptop');
+        $(document).ready(function() {
+            $(".dropdown").hover(
+                function() {
+                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                    $(this).toggleClass('open');
+                },
+                function() {
+                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                    $(this).toggleClass('open');
+                }
+            );
+        });
+    }
+
+
+    $(document).ready(function() {
+        $(".handle").click(function() {
+            $(".quickenquery_des").toggleClass("form_offset");
+        });
+    });
+    </script>
+    <script type="text/javascript">
+    $('select[name="master_student_state"]').on('change', function() {
+        var payload = {
+            'state-id': $(this).val()
+        }
+        var data = {
+            'acid': 'get_center_by_state',
+            'payload': JSON.stringify(payload)
+        }
+        $('select[name="master_student_center"]').html('<option>Please wait...</option>');
+
+        $('#ajaxCenterDetail').hide();
+
+        AjaxRequest.startAjaxRequest(data, BASE_URL + 'public/ajax').done(function(response) {
+            var option = '<option value="select">Please Select</option>';
+            $(response.center).each(function(k, v) {
+                option += '<option value="' + v.id + '">' + v.center_name + '</option>';
+            });
+
+            $('select[name="master_student_center"]').html(option);
+
+        });
+
+    });
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#studentEnqMaster").submit(function(e) {
+            var payload = $('form[name="studentEnqMaster"]').serializeObject();
+
+            //Google Sheet Data Entry start=====================================
+            var booking_type = 'Quick Enquiry';
+            var master_student_name = $('#studentEnqMaster').find('input[name="master_student_name"]')
+                .val();
+            var master_student_mobile = $('#studentEnqMaster').find(
+                'input[name="master_student_mobile"]').val();
+            var master_student_country = $('#studentEnqMaster').find(
+                'select[name="master_student_country"]').val();
+            var master_student_visa_type = $('#studentEnqMaster').find(
+                'select[name="master_student_visa_type"]').val();
+            var d = new Date();
+            var master_student_date = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+            var master_student_time_slot = '';
+
+            var m = new Date();
+            var master_form_date = m.getFullYear() + "-" + (m.getMonth() + 1) + "-" + m.getDate();
+            var master_form_timee = m.getHours() + ":" + (m.getMinutes() + 1);
+            var hours = m.getHours();
+            if (parseInt(hours) > 11) {
+                if (parseInt(hours) == 12) {
+                    var hour = parseInt(hours);
+                } else {
+                    var hour = parseInt(hours) - 12;
+                }
+                var master_form_time = hour + ":" + (m.getMinutes() + 1) + " PM";
+            } else {
+                var master_form_time = master_form_timee + " AM";
+            }
+
+                        jQuery.ajax({
+                url: 'https://script.google.com/macros/s/AKfycbzvqEm270GjdOXD_dRW6z_3wuaWwybk1OIc18nNDzuYdWi5pYNMUfsevo91K4FqgaFM/exec',
+                type: 'post',
+                data: {
+                    Booking_Type: booking_type,
+                    Name: master_student_name,
+                    Phone: master_student_mobile,
+                    Country: master_student_country,
+                    Visa_type: master_student_visa_type,
+                    Date: master_student_date,
+                    Time_slot: master_student_time_slot,
+                    Form_Submit_Date: master_form_date,
+                    Form_Submit_Time: master_form_time
+                },
+                success: function(result) {}
+            });
+                        //Google Sheet Data Entry End=======================================
+
+            var data = {
+                'acid': 'master-student-enquiry',
+                'payload': JSON.stringify(payload)
+            }
+            AjaxRequest.startAjaxRequest(data, BASE_URL + 'public/ajax').done(function(response) {
+                if (response.flag == 1) {
+                    $('#studentEnqMaster').html(response.message);
+                } else {
+                    $('#studentEnqMaster').html(response.message);
+                }
+            });
+            e.preventDefault();
+        });
+
+
+        $("#studentEnqMasterIndex1").submit(function(e) {
+            e.preventDefault();
+            var getCaptchaId = $('#studentEnqMasterIndex1').find('input[name="getCaptchaId"]').val();
+            var storedCaptcha = localStorage.getItem(getCaptchaId);
+            var enteredCaptcha = $('#' + getCaptchaId + 's').val();
+            if (enteredCaptcha != storedCaptcha) {
+                alert('Captcha is incorrect. Please try again.');
+                return;
+            }
+
+            var payload = $('form[name="studentEnqMasterIndex1"]').serializeObject();
+
+
+            //Google Sheet Data Entry start=====================================
+            var booking_type = $('#studentEnqMasterIndex1').find('input[name="booking_type"]').val();
+            if (booking_type == 1) {
+                booking_type = 'WALKIN';
+            } else {
+                booking_type = 'LIVE CALL';
+            }
+            var master_student_name = $('#studentEnqMasterIndex1').find(
+                'input[name="master_student_name"]').val();
+            var master_student_mobile = $('#studentEnqMasterIndex1').find(
+                'input[name="master_student_mobile"]').val();
+            var master_student_country = $('#studentEnqMasterIndex1').find(
+                'select[name="master_student_country"]').val();
+            var master_student_visa_type = $('#studentEnqMasterIndex1').find(
+                'select[name="master_student_visa_type"]').val();
+            var master_student_date = $('#studentEnqMasterIndex1').find(
+                'input[name="master_student_date"]').val();
+            var master_student_time_slot = $('#studentEnqMasterIndex1').find(
+                'select[name="master_student_time_slot"]').val();
+
+            var m = new Date();
+            var master_form_date = m.getFullYear() + "-" + (m.getMonth() + 1) + "-" + m.getDate();
+            var master_form_timee = m.getHours() + ":" + (m.getMinutes() + 1);
+            var hours = m.getHours();
+            if (parseInt(hours) > 11) {
+                if (parseInt(hours) == 12) {
+                    var hour = parseInt(hours);
+                } else {
+                    var hour = parseInt(hours) - 12;
+                }
+                var master_form_time = hour + ":" + (m.getMinutes() + 1) + " PM";
+            } else {
+                var master_form_time = master_form_timee + " AM";
+            }
+
+                        jQuery.ajax({
+                url: 'https://script.google.com/macros/s/AKfycbzvqEm270GjdOXD_dRW6z_3wuaWwybk1OIc18nNDzuYdWi5pYNMUfsevo91K4FqgaFM/exec',
+                type: 'post',
+                data: {
+                    Booking_Type: booking_type,
+                    Name: master_student_name,
+                    Phone: master_student_mobile,
+                    Country: master_student_country,
+                    Visa_type: master_student_visa_type,
+                    Date: master_student_date,
+                    Time_slot: master_student_time_slot,
+                    Form_Submit_Date: master_form_date,
+                    Form_Submit_Time: master_form_time
+                },
+                success: function(result) {}
+            });
+                        //Google Sheet Data Entry End=======================================
+            var data = {
+                'acid': 'master-book-an-appointment',
+                'payload': JSON.stringify(payload)
+            }
+            AjaxRequest.startAjaxRequest(data, BASE_URL + 'public/ajax').done(function(response) {
+                if (response.flag == 1) {
+                    $("#studentEnqMasterIndex1").hide();
+                    $('#masterEnqMsgIndex1').html(response.message);
+                } else {
+                    $('#masterEnqMsgIndex1').html(response.message);
+                }
+            });
+
+        });
+
+
+        $("#studentEnqMasterIndex2").submit(function(e) {
+            e.preventDefault();
+            var getCaptchaId = $('#studentEnqMasterIndex2').find('input[name="getCaptchaId"]').val();
+            var storedCaptcha = localStorage.getItem(getCaptchaId);
+            var enteredCaptcha = $('#' + getCaptchaId + 's').val();
+            if (enteredCaptcha != storedCaptcha) {
+                alert('Captcha is incorrect. Please try again.');
+                return;
+            }
+
+            var payload = $('form[name="studentEnqMasterIndex2"]').serializeObject();
+
+            //Google Sheet Data Entry start=====================================
+            var booking_type = $('#studentEnqMasterIndex2').find('input[name="booking_type"]').val();
+            if (booking_type == 1) {
+                booking_type = 'WALKIN';
+            } else {
+                booking_type = 'LIVE CALL';
+            }
+            var master_student_name = $('#studentEnqMasterIndex2').find(
+                'input[name="master_student_name"]').val();
+            var master_student_mobile = $('#studentEnqMasterIndex2').find(
+                'input[name="master_student_mobile"]').val();
+            var master_student_country = $('#studentEnqMasterIndex2').find(
+                'select[name="master_student_country"]').val();
+            var master_student_visa_type = $('#studentEnqMasterIndex2').find(
+                'select[name="master_student_visa_type"]').val();
+            var master_student_date = $('#studentEnqMasterIndex2').find(
+                'input[name="master_student_date"]').val();
+            var master_student_time_slot = $('#studentEnqMasterIndex2').find(
+                'select[name="master_student_time_slot"]').val();
+
+            var m = new Date();
+            var master_form_date = m.getFullYear() + "-" + (m.getMonth() + 1) + "-" + m.getDate();
+            var master_form_timee = m.getHours() + ":" + (m.getMinutes() + 1);
+            var hours = m.getHours();
+            if (parseInt(hours) > 11) {
+                if (parseInt(hours) == 12) {
+                    var hour = parseInt(hours);
+                } else {
+                    var hour = parseInt(hours) - 12;
+                }
+                var master_form_time = hour + ":" + (m.getMinutes() + 1) + " PM";
+            } else {
+                var master_form_time = master_form_timee + " AM";
+            }
+                        jQuery.ajax({
+                url: 'https://script.google.com/macros/s/AKfycbzvqEm270GjdOXD_dRW6z_3wuaWwybk1OIc18nNDzuYdWi5pYNMUfsevo91K4FqgaFM/exec',
+                type: 'post',
+                data: {
+                    Booking_Type: booking_type,
+                    Name: master_student_name,
+                    Phone: master_student_mobile,
+                    Country: master_student_country,
+                    Visa_type: master_student_visa_type,
+                    Date: master_student_date,
+                    Time_slot: master_student_time_slot,
+                    Form_Submit_Date: master_form_date,
+                    Form_Submit_Time: master_form_time
+                },
+                success: function(result) {}
+            });
+                        //Google Sheet Data Entry End=======================================
+
+
+            var data = {
+                'acid': 'master-book-an-appointment',
+                'payload': JSON.stringify(payload)
+            }
+            AjaxRequest.startAjaxRequest(data, BASE_URL + 'public/ajax').done(function(response) {
+                if (response.flag == 1) {
+                    $("#studentEnqMasterIndex2").hide();
+                    $('#masterEnqMsgIndex2').html(response.message);
+                } else {
+                    $('#masterEnqMsgIndex2').html(response.message);
+                }
+            });
+            e.preventDefault();
+        });
+
+
+        $("#studentEnqMasterHome1").submit(function(e) {
+            e.preventDefault();
+            var getCaptchaId = $('#studentEnqMasterHome1').find('input[name="getCaptchaId"]').val();
+            var storedCaptcha = localStorage.getItem(getCaptchaId);
+            var enteredCaptcha = $('#' + getCaptchaId + 's').val();
+            if (enteredCaptcha != storedCaptcha) {
+                alert('Captcha is incorrect. Please try again.');
+                return;
+            }
+
+            var payload = $('form[name="studentEnqMasterHome1"]').serializeObject();
+
+
+            //Google Sheet Data Entry start=====================================
+            var booking_type = $('#studentEnqMasterHome1').find('input[name="booking_type"]').val();
+            if (booking_type == 1) {
+                booking_type = 'WALKIN';
+            } else {
+                booking_type = 'LIVE CALL';
+            }
+            var master_student_name = $('#studentEnqMasterHome1').find(
+                'input[name="master_student_name"]').val();
+            var master_student_mobile = $('#studentEnqMasterHome1').find(
+                'input[name="master_student_mobile"]').val();
+            var master_student_country = $('#studentEnqMasterHome1').find(
+                'select[name="master_student_country"]').val();
+            var master_student_visa_type = $('#studentEnqMasterHome1').find(
+                'select[name="master_student_visa_type"]').val();
+            var master_student_date = $('#studentEnqMasterHome1').find(
+                'input[name="master_student_date"]').val();
+            var master_student_time_slot = $('#studentEnqMasterHome1').find(
+                'select[name="master_student_time_slot"]').val();
+
+            var m = new Date();
+            var master_form_date = m.getFullYear() + "-" + (m.getMonth() + 1) + "-" + m.getDate();
+            var master_form_timee = m.getHours() + ":" + (m.getMinutes() + 1);
+            var hours = m.getHours();
+            if (parseInt(hours) > 11) {
+                if (parseInt(hours) == 12) {
+                    var hour = parseInt(hours);
+                } else {
+                    var hour = parseInt(hours) - 12;
+                }
+                var master_form_time = hour + ":" + (m.getMinutes() + 1) + " PM";
+            } else {
+                var master_form_time = master_form_timee + " AM";
+            }
+                        jQuery.ajax({
+                url: 'https://script.google.com/macros/s/AKfycbzvqEm270GjdOXD_dRW6z_3wuaWwybk1OIc18nNDzuYdWi5pYNMUfsevo91K4FqgaFM/exec',
+                type: 'post',
+                data: {
+                    Booking_Type: booking_type,
+                    Name: master_student_name,
+                    Phone: master_student_mobile,
+                    Country: master_student_country,
+                    Visa_type: master_student_visa_type,
+                    Date: master_student_date,
+                    Time_slot: master_student_time_slot,
+                    Form_Submit_Date: master_form_date,
+                    Form_Submit_Time: master_form_time
+                },
+                success: function(result) {}
+            });
+                        //Google Sheet Data Entry End=======================================
+
+            var data = {
+                'acid': 'master-book-an-appointment',
+                'payload': JSON.stringify(payload)
+            }
+            AjaxRequest.startAjaxRequest(data, BASE_URL + 'public/ajax').done(function(response) {
+                if (response.flag == 1) {
+                    $("#studentEnqMasterHome1").hide();
+                    $('#masterEnqMsgHome1').html(response.message);
+                } else {
+                    $('#masterEnqMsgHome1').html(response.message);
+                }
+            });
+            e.preventDefault();
+        });
+
+
+        $("#studentEnqMasterHome2").submit(function(e) {
+            e.preventDefault();
+            var getCaptchaId = $('#studentEnqMasterHome2').find('input[name="getCaptchaId"]').val();
+            var storedCaptcha = localStorage.getItem(getCaptchaId);
+            var enteredCaptcha = $('#' + getCaptchaId + 's').val();
+            if (enteredCaptcha != storedCaptcha) {
+                alert('Captcha is incorrect. Please try again.');
+                return;
+            }
+
+            var payload = $('form[name="studentEnqMasterHome2"]').serializeObject();
+
+
+            //Google Sheet Data Entry start====================================
+            var booking_type = $('#studentEnqMasterHome2').find('input[name="booking_type"]').val();
+            if (booking_type == 1) {
+                booking_type = 'WALKIN';
+            } else {
+                booking_type = 'LIVE CALL';
+            }
+            var master_student_name = $('#studentEnqMasterHome2').find(
+                'input[name="master_student_name"]').val();
+            var master_student_mobile = $('#studentEnqMasterHome2').find(
+                'input[name="master_student_mobile"]').val();
+            var master_student_country = $('#studentEnqMasterHome2').find(
+                'select[name="master_student_country"]').val();
+            var master_student_visa_type = $('#studentEnqMasterHome2').find(
+                'select[name="master_student_visa_type"]').val();
+            var master_student_date = $('#studentEnqMasterHome2').find(
+                'input[name="master_student_date"]').val();
+            var master_student_time_slot = $('#studentEnqMasterHome2').find(
+                'select[name="master_student_time_slot"]').val();
+
+            var m = new Date();
+            var master_form_date = m.getFullYear() + "-" + (m.getMonth() + 1) + "-" + m.getDate();
+            var master_form_timee = m.getHours() + ":" + (m.getMinutes() + 1);
+            var hours = m.getHours();
+            if (parseInt(hours) > 11) {
+                if (parseInt(hours) == 12) {
+                    var hour = parseInt(hours);
+                } else {
+                    var hour = parseInt(hours) - 12;
+                }
+                var master_form_time = hour + ":" + (m.getMinutes() + 1) + " PM";
+            } else {
+                var master_form_time = master_form_timee + " AM";
+            }
+                        jQuery.ajax({
+                url: 'https://script.google.com/macros/s/AKfycbzvqEm270GjdOXD_dRW6z_3wuaWwybk1OIc18nNDzuYdWi5pYNMUfsevo91K4FqgaFM/exec',
+                type: 'post',
+                data: {
+                    Booking_Type: booking_type,
+                    Name: master_student_name,
+                    Phone: master_student_mobile,
+                    Country: master_student_country,
+                    Visa_type: master_student_visa_type,
+                    Date: master_student_date,
+                    Time_slot: master_student_time_slot,
+                    Form_Submit_Date: master_form_date,
+                    Form_Submit_Time: master_form_time
+                },
+                success: function(result) {}
+            });
+                        //Google Sheet Data Entry End=======================================
+
+            var data = {
+                'acid': 'master-book-an-appointment',
+                'payload': JSON.stringify(payload)
+            }
+            AjaxRequest.startAjaxRequest(data, BASE_URL + 'public/ajax').done(function(response) {
+                if (response.flag == 1) {
+                    $("#studentEnqMasterHome2").hide();
+                    $('#masterEnqMsgHome2').html(response.message);
+                } else {
+                    $('#masterEnqMsgHome2').html(response.message);
+                }
+            });
+
+        });
+
+        $("#studentEnq").submit(function(e) {
+            var payload = $('form[name="studentEnq"]').serializeObject();
+            var data = {
+                'acid': 'master-book-am-appointment',
+                'payload': JSON.stringify(payload)
+            }
+            AjaxRequest.startAjaxRequest(data, BASE_URL + 'public/ajax').done(function(response) {
+                if (response.flag == 1) {
+                    $("#studentEnq").hide();
+                    $('#masterEnqMsgpopup').html(response.message);
+                } else {
+                    $('#masterEnqMsg').html(response.message);
+                }
+            });
+            e.preventDefault();
+        });
+
+
+
+    });
+    </script>
+
+
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        setTimeout(function() {
+            //$('.bottom_popup').fadeIn(500);
+        }, 5000);
+    });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var mainOwl = $('.owl-carousel.main-carousel');
+        mainOwl.owlCarousel({
+            autoplay: true,
+            smartSpeed: 800,
+            loop: true,
+            nav: false,
+            navText: false,
+            dots: true,
+            mouseDrag: true,
+            margin: 10,
+            navigation: true,
+            navigationText: [
+                '<span class="fa-stack"><i class="fa fa-circle fa-stack-1x"></i><i class="fa fa-chevron-circle-left fa-stack-1x fa-inverse"></i></span>',
+                '<span class="fa-stack"><i class="fa fa-circle fa-stack-1x"></i><i class="fa fa-chevron-circle-right fa-stack-1x fa-inverse"></i></span>'
+            ],
+            slideBy: 1,
+            items: 1,
+        });
+
+
+        // tween for Main Slider Owl change 
+        mainOwl.on('changed.owl.carousel', function(e) {
+            var scrollController = new ScrollMagic.Controller();
+
+            $(".owl-carousel.main-carousel #first-p").each(function() {
+                var fadeUpScene = new ScrollMagic.Scene({
+                        triggerElement: this,
+                        triggerHook: 1
+                    })
+                    .setTween(TweenMax.from(this, 1, {
+                        scale: 0,
+                        ease: Power1.easeIn,
+                        delay: 1
+                    }))
+                    .addTo(scrollController)
+            })
+            $(".owl-carousel.main-carousel .slide1 img").each(function() {
+                var fadeUpScene = new ScrollMagic.Scene({
+                        triggerElement: this,
+                        triggerHook: 1
+                    })
+                    .setTween(TweenMax.from(this, 1, {
+                        x: 50,
+                        opacity: 0,
+                        ease: Power1.easeOut,
+                        delay: 0.5
+                    }))
+                    .addTo(scrollController)
+            })
+
+        });
+
+    });
+    </script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+        autoplay: {
+            delay: 4000,
+        },
+    });
+    </script>
+
+    <script type="text/javascript">
+    //   $(document).ready(function(){
+    //     $('.customer-logos').slick({
+    //         slidesToShow: 5,
+    //         slidesToScroll: 1,
+    //         autoplay: true,
+    //         autoplaySpeed: 1500,
+    //         arrows: false,
+    //         dots: false,
+    //         pauseOnHover: false,
+    //         responsive: [{
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToShow: 4
+    //             }
+    //         }, {
+    //             breakpoint: 520,
+    //             settings: {
+    //                 slidesToShow: 3
+    //             }
+    //         }]
+    //     });
+    // });
+    </script>
+
+    <script type="text/javascript">
+    $(function() {
+        $('.stu-slide').owlCarousel({
+            nav: true,
+            loop: true,
+            slideBy: 'page',
+            rewind: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                480: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 2
+                }
+            },
+            autoplay: true,
+            autoPlaySpeed: 5000,
+            autoPlayTimeout: 5000,
+            autoplayHoverPause: true,
+            smartSpeed: 500,
+            navText: [
+                '<svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>',
+                '<svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>'
+            ]
+        });
+    });
+
+    $(function() {
+        $('.latest_news .owl-carousel').owlCarousel({
+            nav: true,
+            loop: true,
+            slideBy: 'page',
+            rewind: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                480: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            },
+            autoplay: true,
+            autoPlaySpeed: 5000,
+            autoPlayTimeout: 5000,
+            autoplayHoverPause: true,
+            smartSpeed: 500,
+            navText: [
+                '<svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>',
+                '<svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>'
+            ]
+        });
+    });
+    </script>
+
+    <script type="text/javascript">
+    $(function() {
+        $('.available_pro').owlCarousel({
+            nav: true,
+            loop: true,
+            slideBy: 'page',
+            rewind: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                480: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                }
+            },
+            autoplay: true,
+            autoPlaySpeed: 5000,
+            autoPlayTimeout: 5000,
+            autoplayHoverPause: true,
+            smartSpeed: 500
+        });
+    });
+
+    $(function() {
+        $('.blogwork_col').owlCarousel({
+            nav: true,
+            loop: true,
+            slideBy: 'page',
+            rewind: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                480: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                }
+            },
+            autoplay: true,
+            autoPlaySpeed: 5000,
+            autoPlayTimeout: 5000,
+            autoplayHoverPause: true,
+            smartSpeed: 500
+        });
+    });
+
+    $(function() {
+        $('.flexworkscol').owlCarousel({
+            nav: true,
+            loop: true,
+            slideBy: 'page',
+            rewind: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                480: {
+                    items: 1
+                },
+                600: {
+                    items: 4
+                },
+                1000: {
+                    items: 4
+                }
+            },
+            autoplay: true,
+            autoPlaySpeed: 5000,
+            autoPlayTimeout: 5000,
+            autoplayHoverPause: true,
+            smartSpeed: 500
+        });
+    });
+    </script>
+
+
+    <script type="text/javascript">
+    function toggleIcon(e) {
+        $(e.target)
+            .prev('.panel-heading')
+            .find(".more-less")
+            .toggleClass('glyphicon-plus glyphicon-minus');
+    }
+    $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+    $('.panel-group').on('shown.bs.collapse', toggleIcon);
+    </script>
+
+    <script type="text/javascript">
+    $(".formrotate").click(function(e) {
+        e.preventDefault();
+        $(".enq-form").toggleClass('clickfomup');
+        $(".formoverlay").toggleClass('active');
+    });
+
+    $(".formoverlay").click(function(e) {
+        e.preventDefault();
+        $('.formoverlay').removeClass('active');
+        $(".enq-form").removeClass('clickfomup');
+    });
+    // $(".enq-form").click(function(e){
+    //    e.preventDefault();
+    // });
+    </script>
+    <script type="text/javascript">
+    $("#enqModal .btn-close").click(function() {
+        // $("#enqModal").css('display','none');
+        $("#enqModal").modal('hide');
+    });
+    </script>
+
+    <script type="text/javascript">
+    $(".bookappointmentpopup .countryUlist .nav-tabs li").click(function() {
+        $(".nav-tabs li").removeClass("active");
+        $(this).addClass("active");
+        var data_id = $(this).attr('data-id');
+        $('.bookappointmentpopup .tab-content .tab-pane').removeClass("in active");
+        $('#' + data_id).addClass("in active");
+
+    });
+    </script>
+
+    <script type="text/javascript">
+    $(window).load(function() {
+        setTimeout(function() {
+            $('#enqModal').modal('show');
+        }, 10000);
+    });
+
+
+    $(window).scroll(function() {
+            $(this).scrollTop() >= 50 ? $("#return-to-top").fadeIn(200) : $("#return-to-top").fadeOut(200)
+        }),
+        $("#return-to-top").click(function() {
+            $("body,html").animate({
+                scrollTop: 0
+            }, 500)
+        })
+    </script>
+    <script>
+    function change_country(val) {
+        $.ajax({
+            method: "post",
+            url: 'https://www.ibtoverseas.com/change-country-stamps',
+            data: {
+                country: val
+            },
+            success: function(data) {
+                $(".AI_lightbox_grid").html(data);
+            }
+        })
+    }
+    </script>
+    <script>
+    function generateCaptcha(id) {
+        var captcha = Math.floor(100 + Math.random() * 900);
+
+        if (id == 'all') {
+            var ids = ['captchaInput', 'captchaInput2', 'captchaInput3', 'captchaInput4', 'captchaInput5', 'captchaInput6'];
+
+            ids.forEach(function(item) {
+                var element = document.getElementById(item);
+                if (element) {
+                    element.innerText = captcha;
+                    localStorage.setItem(item, captcha);
+                }
+            });
+
+        } else {
+            var element = document.getElementById(id);
+            if (element) {
+                element.innerText = captcha;
+                localStorage.setItem(id, captcha);
+            }
+        }
+    }
+
+
+    function refreshCaptchaBtn(id) {
+        generateCaptcha(id);
+        document.getElementById(id + 's').value = '';
+    };
+
+    window.onload = function() {
+        generateCaptcha('all');
+    };
+    </script>
+
+</body>
+
+</html>
