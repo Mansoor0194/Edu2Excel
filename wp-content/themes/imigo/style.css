@@ -3279,7 +3279,7 @@ aside.widget .wp-block-social-links {
         flex-wrap: nowrap !important;
         align-items: center;
         justify-content: flex-start;
-        gap: 8px;
+        gap: 24px;
     }
 
     .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav>li>a {
@@ -5311,29 +5311,53 @@ body.admin-bar .main-header.ekit-sticky--effects {
 
     /* Hero section: the rotating circle + hero image */
     .hero-content {
-        overflow: hidden !important;
+        overflow: visible !important;
     }
 
     .elementor-element.elementor-element-da69d07 {
         position: relative !important;
         width: 100% !important;
-        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: visible !important;
+        min-height: 360px !important;
     }
 
     .elementor-element.elementor-element-f38b681 {
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
-        transform: none !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 66% !important;
+        max-width: 240px !important;
+        height: auto !important;
+        margin: 0 !important;
+        display: block !important;
+        z-index: 1 !important;
+    }
+
+    .hero-content .hero-image img {
         width: 100% !important;
-        max-width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
     }
 
     /* Country circle image: constrain so it doesn't overflow */
-    .country-circle-img img {
-        max-width: 90vw !important;
+    .country-circle-img {
+        width: 100% !important;
+        max-width: 360px !important;
         margin: 0 auto !important;
+    }
+
+    .country-circle-img img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
         display: block !important;
+        margin: 0 auto !important;
     }
 
     /* Hero content absolute flag images */
@@ -5540,5 +5564,240 @@ body.admin-bar .main-header.ekit-sticky--effects {
         font-size: var(--e-global-typography-primary-font-size);
         line-height: var(--e-global-typography-primary-line-height);
         letter-spacing: var(--e-global-typography-primary-letter-spacing);
+    }
+}
+
+/* ============================================================
+   Premium Mobile Navigation & Header Overrides
+   ============================================================ */
+@media (max-width: 1024px) {
+    /* 1. Vertically align logo and hamburger menu button in the header */
+    .elementor-element-4e47e9a > .e-con-inner {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f86df08 {
+        width: auto !important;
+        max-width: 75% !important;
+        flex: 1 !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-0471456 {
+        width: auto !important;
+        max-width: 25% !important;
+        flex: 0 0 auto !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+
+    /* 2. Sleek transparent hamburger button with hover effect */
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-menu-hamburger {
+        background-color: transparent !important;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+        width: 44px !important;
+        height: 44px !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 50% !important;
+        transition: background-color 0.3s ease, transform 0.2s ease !important;
+        margin: 0 !important;
+        float: none !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-menu-hamburger:hover {
+        background-color: rgba(0, 39, 104, 0.08) !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-menu-hamburger:active {
+        transform: scale(0.92) !important;
+    }
+
+    /* Set hamburger icon to brand navy and clean line size */
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-menu-hamburger > .ekit-menu-icon {
+        color: #002768 !important;
+        font-size: 26px !important;
+        line-height: 1 !important;
+        transition: color 0.3s ease !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-menu-hamburger:hover > .ekit-menu-icon {
+        color: #BE0B32 !important;
+    }
+
+    /* 3. Luxurious dark navy mobile off-canvas drawer */
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-menu-container {
+        background-color: #002768 !important; /* Premium brand navy instead of bright red */
+        background: #002768 !important;
+        border-radius: 0px !important;
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    /* Identity panel (top section of mobile menu drawer) styling */
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-nav-identity-panel {
+        background-color: #001f54 !important; /* Slightly darker navy background for branding section */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        padding: 15px 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-nav-logo {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-nav-logo > img {
+        max-width: 140px !important;
+        max-height: 48px !important;
+        object-fit: contain !important;
+    }
+
+    /* 4. Elegant transparent close button */
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-menu-close {
+        background-color: transparent !important;
+        background: transparent !important;
+        color: #ffffff !important;
+        font-size: 26px !important;
+        line-height: 1 !important;
+        width: 36px !important;
+        height: 36px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: background-color 0.3s ease, color 0.3s ease !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-menu-close:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: #BE0B32 !important;
+    }
+
+    /* 5. Mobile navigation menu links & hover contrast fix */
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav > li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav > li > a {
+        color: #ffffff !important;
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        padding: 14px 20px !important;
+        transition: color 0.3s ease, padding-left 0.3s ease !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav > li > a:hover,
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav > li > a:focus,
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav > li > a:active,
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav > li:hover > a,
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav > li.current-menu-item > a,
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav > li.current-menu-ancestor > a {
+        color: #BE0B32 !important; /* Elegant brand red text on hover/active instead of invisible navy */
+        padding-left: 25px !important; /* Subtle shift on hover */
+    }
+
+    /* Style the submenus indicator/down-arrows on mobile */
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav > li > a .elementskit-submenu-indicator {
+        color: rgba(255, 255, 255, 0.7) !important;
+        transition: color 0.3s ease !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav > li:hover > a .elementskit-submenu-indicator {
+        color: #BE0B32 !important;
+    }
+
+    /* 6. Indent and style mobile submenu dropdowns */
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav .elementskit-submenu-panel {
+        background-color: rgba(0, 0, 0, 0.15) !important; /* Slightly darker nesting */
+        border-left: 2px solid rgba(190, 11, 50, 0.3) !important; /* Brand red left border indicator */
+        margin-left: 20px !important;
+        margin-right: 10px !important;
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+        border-radius: 4px !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav .elementskit-submenu-panel > li > a {
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        padding: 10px 15px !important;
+        transition: color 0.3s ease, padding-left 0.3s ease !important;
+    }
+
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav .elementskit-submenu-panel > li > a:hover,
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav .elementskit-submenu-panel > li > a:focus,
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav .elementskit-submenu-panel > li > a:active,
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav .elementskit-submenu-panel > li:hover > a,
+    .elementor-3756 .elementor-element.elementor-element-f4b1d8d .elementskit-navbar-nav .elementskit-submenu-panel > li.current-menu-item > a {
+        color: #BE0B32 !important;
+        padding-left: 20px !important;
+    }
+}
+
+/* ============================================================
+   Premium Video Section & Stats Card Mobile Responsiveness
+   ============================================================ */
+@media (max-width: 767px) {
+    /* Set parent container to auto height and remove padding */
+    .elementor-element.elementor-element-f4fe07e.service-img {
+        padding: 0 !important;
+        min-height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .elementor-element.elementor-element-f4fe07e.service-img > .e-con-inner {
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+    }
+
+    /* Video area where the PLAY button is centered */
+    .elementor-element.elementor-element-cfd1291 {
+        height: 220px !important; /* Perfect height for mobile video crop */
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        z-index: 10 !important;
+        width: 100% !important;
+    }
+
+    .elementor-element.elementor-element-cfd1291 .ekit-wid-con,
+    .elementor-element.elementor-element-cfd1291 .video-content {
+        height: 100% !important;
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Stats card sits cleanly below the video area with auto height */
+    .elementor-element.elementor-element-49180ce {
+        margin-top: 0 !important;
+        height: auto !important;
+        min-height: auto !important;
+        position: relative !important;
+        z-index: 5 !important;
+        width: 100% !important;
     }
 }
