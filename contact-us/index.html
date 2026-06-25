@@ -241,6 +241,50 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 					background-color: transparent !important;
 					transition: all 0.3s ease-in-out !important;
 				}
+
+				/* Pathway Segmented Control Toggles */
+				.pathway-btn {
+					background-color: #EFF4FA99 !important;
+					color: #002768 !important;
+					border: 1.5px solid #EFF4FA !important;
+				}
+				.pathway-btn:hover {
+					background-color: #EFF4FA !important;
+				}
+				.pathway-btn.active {
+					background-color: #BE0B32 !important;
+					color: #FFFFFF !important;
+					border-color: #BE0B32 !important;
+					box-shadow: 0 0 8px rgba(190, 11, 50, 0.15) !important;
+				}
+
+				/* Education Qualification Section font-size and height consistency */
+				#contactForm .edu-qualification-section .form-control {
+					font-size: 14px !important;
+					height: 50px !important;
+					padding: 10px 15px !important;
+				}
+				#contactForm .edu-qualification-section .form-control::placeholder {
+					font-size: 14px !important;
+					opacity: 1 !important;
+				}
+				#contactForm .edu-qualification-section .form-control::-webkit-input-placeholder {
+					font-size: 14px !important;
+				}
+				#contactForm .edu-qualification-section .form-control::-moz-placeholder {
+					font-size: 14px !important;
+				}
+				#contactForm .edu-qualification-section .form-control:-ms-input-placeholder {
+					font-size: 14px !important;
+				}
+				#contactForm .edu-qualification-section .form-control:-moz-placeholder {
+					font-size: 14px !important;
+				}
+				.edu-qualification-section .custom-select-trigger {
+					height: 50px !important;
+					font-size: 14px !important;
+					padding: 10px 15px !important;
+				}
 			</style>
 						<meta name="theme-color" content="#FFFFFF">
 			<link rel="icon" href="../wp-content/uploads/2024/12/favicon.png" sizes="32x32">
@@ -639,6 +683,338 @@ Saturday,  8 AM - 4 PM</p>
 		<p><span class="wpcf7-form-control-wrap" data-name="phone"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="phone" aria-required="true" aria-invalid="false" placeholder="+91 1234567890" value="" type="text" name="phone"></span>
 		</p>
 	</div>
+	<!-- Education Qualification Section -->
+	<div class="form-group col-md-12 mb-4 edu-qualification-section">
+		<h4 style="color: #002768; font-weight: 700; margin-top: 10px; margin-bottom: 20px; font-size: 20px; border-left: 4px solid #BE0B32; padding-left: 12px; font-family: 'Afacad Flux', sans-serif;">Education Qualification</h4>
+		<div class="row g-3">
+			<!-- 10th Standard Card (Single Row, 2 Columns with Year Dropdown) -->
+			<div class="col-md-12">
+				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 12px;">
+					<h5 style="color: #002768; font-weight: 600; font-size: 16px; margin-bottom: 15px; font-family: 'Afacad Flux', sans-serif;">10th Standard</h5>
+					<div class="row g-3">
+						<div class="col-md-6">
+							<span class="wpcf7-form-control-wrap" data-name="edu-10th-percentage">
+								<input class="wpcf7-form-control wpcf7-text form-control" id="edu10thPercent" placeholder="Percentage (e.g., 85%)" type="text" name="edu-10th-percentage" style="background-color: #ffffff !important; height: 50px !important; font-size: 14px !important;">
+							</span>
+						</div>
+						<div class="col-md-6">
+							<span class="wpcf7-form-control-wrap" data-name="edu-10th-year">
+								<select class="wpcf7-form-control wpcf7-select form-control" id="edu10thYear" name="edu-10th-year" aria-invalid="false" style="background-color: #ffffff !important; height: 50px !important;">
+									<option value="">Year of Passing</option>
+									<option value="2031">2031</option>
+									<option value="2030">2030</option>
+									<option value="2029">2029</option>
+									<option value="2028">2028</option>
+									<option value="2027">2027</option>
+									<option value="2026">2026</option>
+									<option value="2025">2025</option>
+									<option value="2024">2024</option>
+									<option value="2023">2023</option>
+									<option value="2022">2022</option>
+									<option value="2021">2021</option>
+									<option value="2020">2020</option>
+									<option value="2019">2019</option>
+									<option value="2018">2018</option>
+									<option value="2017">2017</option>
+									<option value="2016">2016</option>
+									<option value="2015">2015</option>
+									<option value="2014">2014</option>
+									<option value="2013">2013</option>
+									<option value="2012">2012</option>
+									<option value="2011">2011</option>
+									<option value="2010">2010</option>
+									<option value="2009">2009</option>
+									<option value="2008">2008</option>
+									<option value="2007">2007</option>
+									<option value="2006">2006</option>
+									<option value="2005">2005</option>
+								</select>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Post-10th Selection (Intermediate vs Diploma Toggle) -->
+			<div class="col-md-12">
+				<div class="pathway-toggle-container" style="display: flex; gap: 10px; margin-bottom: 5px;">
+					<button type="button" class="pathway-btn active" id="btnPathwayInter" style="flex: 1; height: 50px; border-radius: 8px; font-weight: 600; font-family: 'Afacad Flux', sans-serif; cursor: pointer; transition: all 0.3s;">Intermediate</button>
+					<button type="button" class="pathway-btn" id="btnPathwayDiploma" style="flex: 1; height: 50px; border-radius: 8px; font-weight: 600; font-family: 'Afacad Flux', sans-serif; cursor: pointer; transition: all 0.3s;">Diploma</button>
+				</div>
+				<input type="hidden" id="post10thSelection" value="Intermediate">
+			</div>
+
+			<!-- Intermediate Card (shown by default) -->
+			<div class="col-md-12" id="interFields">
+				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 12px;">
+					<h5 style="color: #002768; font-weight: 600; font-size: 16px; margin-bottom: 15px; font-family: 'Afacad Flux', sans-serif;">Intermediate Details</h5>
+					<div class="row g-3">
+						<div class="col-md-4">
+							<span class="wpcf7-form-control-wrap" data-name="edu-inter-course">
+								<select class="wpcf7-form-control wpcf7-select form-control" id="eduInterCourse" name="edu-inter-course" aria-invalid="false" style="background-color: #ffffff !important; height: 50px !important;">
+									<option value="">Select Course</option>
+									<option value="MPC">MPC</option>
+									<option value="BIPC">BIPC</option>
+									<option value="CEC">CEC</option>
+									<option value="MEC">MEC</option>
+									<option value="Others">Others</option>
+								</select>
+							</span>
+						</div>
+						<div class="col-md-4" id="eduInterCourseOthersContainer" style="display: none;">
+							<span class="wpcf7-form-control-wrap" data-name="edu-inter-course-others">
+								<input class="wpcf7-form-control wpcf7-text form-control" id="eduInterCourseOthers" placeholder="Specify Course" type="text" name="edu-inter-course-others" style="background-color: #ffffff !important; height: 50px !important; font-size: 14px !important;">
+							</span>
+						</div>
+						<div class="col-md-4">
+							<span class="wpcf7-form-control-wrap" data-name="edu-inter-percentage">
+								<input class="wpcf7-form-control wpcf7-text form-control" id="eduInterPercent" placeholder="Percentage" type="text" name="edu-inter-percentage" style="background-color: #ffffff !important; height: 50px !important; font-size: 14px !important;">
+							</span>
+						</div>
+						<div class="col-md-4" id="eduInterYearContainer">
+							<span class="wpcf7-form-control-wrap" data-name="edu-inter-year">
+								<select class="wpcf7-form-control wpcf7-select form-control" id="eduInterYear" name="edu-inter-year" aria-invalid="false" style="background-color: #ffffff !important; height: 50px !important;">
+									<option value="">Year of Passing</option>
+									<option value="2031">2031</option>
+									<option value="2030">2030</option>
+									<option value="2029">2029</option>
+									<option value="2028">2028</option>
+									<option value="2027">2027</option>
+									<option value="2026">2026</option>
+									<option value="2025">2025</option>
+									<option value="2024">2024</option>
+									<option value="2023">2023</option>
+									<option value="2022">2022</option>
+									<option value="2021">2021</option>
+									<option value="2020">2020</option>
+									<option value="2019">2019</option>
+									<option value="2018">2018</option>
+									<option value="2017">2017</option>
+									<option value="2016">2016</option>
+									<option value="2015">2015</option>
+									<option value="2014">2014</option>
+									<option value="2013">2013</option>
+									<option value="2012">2012</option>
+									<option value="2011">2011</option>
+									<option value="2010">2010</option>
+									<option value="2009">2009</option>
+									<option value="2008">2008</option>
+									<option value="2007">2007</option>
+									<option value="2006">2006</option>
+									<option value="2005">2005</option>
+								</select>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Diploma Card (hidden by default) -->
+			<div class="col-md-12" id="diplomaFields" style="display: none;">
+				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 12px;">
+					<h5 style="color: #002768; font-weight: 600; font-size: 16px; margin-bottom: 15px; font-family: 'Afacad Flux', sans-serif;">Diploma Details</h5>
+					<div class="row g-3">
+						<div class="col-md-4">
+							<span class="wpcf7-form-control-wrap" data-name="edu-diploma-course">
+								<select class="wpcf7-form-control wpcf7-select form-control" id="eduDiplomaCourse" name="edu-diploma-course" aria-invalid="false" style="background-color: #ffffff !important; height: 50px !important;">
+									<option value="">Select Branch</option>
+									<option value="Mechanical">Mechanical</option>
+									<option value="Electrical">Electrical</option>
+									<option value="Civil">Civil</option>
+									<option value="CSE">CSE</option>
+									<option value="Others">Others</option>
+								</select>
+							</span>
+						</div>
+						<div class="col-md-4" id="eduDiplomaCourseOthersContainer" style="display: none;">
+							<span class="wpcf7-form-control-wrap" data-name="edu-diploma-course-others">
+								<input class="wpcf7-form-control wpcf7-text form-control" id="eduDiplomaCourseOthers" placeholder="Specify Branch" type="text" name="edu-diploma-course-others" style="background-color: #ffffff !important; height: 50px !important; font-size: 14px !important;">
+							</span>
+						</div>
+						<div class="col-md-4">
+							<span class="wpcf7-form-control-wrap" data-name="edu-diploma-percentage">
+								<input class="wpcf7-form-control wpcf7-text form-control" id="eduDiplomaPercent" placeholder="Percentage" type="text" name="edu-diploma-percentage" style="background-color: #ffffff !important; height: 50px !important; font-size: 14px !important;">
+							</span>
+						</div>
+						<div class="col-md-4" id="eduDiplomaYearContainer">
+							<span class="wpcf7-form-control-wrap" data-name="edu-diploma-year">
+								<select class="wpcf7-form-control wpcf7-select form-control" id="eduDiplomaYear" name="edu-diploma-year" aria-invalid="false" style="background-color: #ffffff !important; height: 50px !important;">
+									<option value="">Year of Passing</option>
+									<option value="2031">2031</option>
+									<option value="2030">2030</option>
+									<option value="2029">2029</option>
+									<option value="2028">2028</option>
+									<option value="2027">2027</option>
+									<option value="2026">2026</option>
+									<option value="2025">2025</option>
+									<option value="2024">2024</option>
+									<option value="2023">2023</option>
+									<option value="2022">2022</option>
+									<option value="2021">2021</option>
+									<option value="2020">2020</option>
+									<option value="2019">2019</option>
+									<option value="2018">2018</option>
+									<option value="2017">2017</option>
+									<option value="2016">2016</option>
+									<option value="2015">2015</option>
+									<option value="2014">2014</option>
+									<option value="2013">2013</option>
+									<option value="2012">2012</option>
+									<option value="2011">2011</option>
+									<option value="2010">2010</option>
+									<option value="2009">2009</option>
+									<option value="2008">2008</option>
+									<option value="2007">2007</option>
+									<option value="2006">2006</option>
+									<option value="2005">2005</option>
+								</select>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Higher Ed Selection (Degree vs B.Tech Toggle) -->
+			<div class="col-md-12">
+				<div class="pathway-toggle-container" style="display: flex; gap: 10px; margin-bottom: 5px;">
+					<button type="button" class="pathway-btn active" id="btnPathwayDegree" style="flex: 1; height: 50px; border-radius: 8px; font-weight: 600; font-family: 'Afacad Flux', sans-serif; cursor: pointer; transition: all 0.3s;">Degree</button>
+					<button type="button" class="pathway-btn" id="btnPathwayBtech" style="flex: 1; height: 50px; border-radius: 8px; font-weight: 600; font-family: 'Afacad Flux', sans-serif; cursor: pointer; transition: all 0.3s;">B.Tech</button>
+				</div>
+				<input type="hidden" id="higherEdSelection" value="Degree">
+			</div>
+
+			<!-- Degree Card (shown by default) -->
+			<div class="col-md-12" id="degreeFields">
+				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 12px;">
+					<h5 style="color: #002768; font-weight: 600; font-size: 16px; margin-bottom: 15px; font-family: 'Afacad Flux', sans-serif;">Degree Details</h5>
+					<div class="row g-3">
+						<div class="col-md-4">
+							<span class="wpcf7-form-control-wrap" data-name="edu-degree-course">
+								<select class="wpcf7-form-control wpcf7-select form-control" id="eduDegreeCourse" name="edu-degree-course" aria-invalid="false" style="background-color: #ffffff !important; height: 50px !important;">
+									<option value="">Select Course</option>
+									<option value="B.Sc">B.Sc</option>
+									<option value="B.Com">B.Com</option>
+									<option value="B.A">B.A</option>
+									<option value="BBA">BBA</option>
+									<option value="Others">Others</option>
+								</select>
+							</span>
+						</div>
+						<div class="col-md-4" id="eduDegreeCourseOthersContainer" style="display: none;">
+							<span class="wpcf7-form-control-wrap" data-name="edu-degree-course-others">
+								<input class="wpcf7-form-control wpcf7-text form-control" id="eduDegreeCourseOthers" placeholder="Specify Degree" type="text" name="edu-degree-course-others" style="background-color: #ffffff !important; height: 50px !important; font-size: 14px !important;">
+							</span>
+						</div>
+						<div class="col-md-4">
+							<span class="wpcf7-form-control-wrap" data-name="edu-degree-cgpa">
+								<input class="wpcf7-form-control wpcf7-text form-control" id="eduDegreeCgpa" placeholder="CGPA" type="text" name="edu-degree-cgpa" style="background-color: #ffffff !important; height: 50px !important; font-size: 14px !important;">
+							</span>
+						</div>
+						<div class="col-md-4" id="eduDegreeYearContainer">
+							<span class="wpcf7-form-control-wrap" data-name="edu-degree-year">
+								<select class="wpcf7-form-control wpcf7-select form-control" id="eduDegreeYear" name="edu-degree-year" aria-invalid="false" style="background-color: #ffffff !important; height: 50px !important;">
+									<option value="">Year of Passing</option>
+									<option value="2031">2031</option>
+									<option value="2030">2030</option>
+									<option value="2029">2029</option>
+									<option value="2028">2028</option>
+									<option value="2027">2027</option>
+									<option value="2026">2026</option>
+									<option value="2025">2025</option>
+									<option value="2024">2024</option>
+									<option value="2023">2023</option>
+									<option value="2022">2022</option>
+									<option value="2021">2021</option>
+									<option value="2020">2020</option>
+									<option value="2019">2019</option>
+									<option value="2018">2018</option>
+									<option value="2017">2017</option>
+									<option value="2016">2016</option>
+									<option value="2015">2015</option>
+									<option value="2014">2014</option>
+									<option value="2013">2013</option>
+									<option value="2012">2012</option>
+									<option value="2011">2011</option>
+									<option value="2010">2010</option>
+									<option value="2009">2009</option>
+									<option value="2008">2008</option>
+									<option value="2007">2007</option>
+									<option value="2006">2006</option>
+									<option value="2005">2005</option>
+								</select>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- B.Tech Card (hidden by default) -->
+			<div class="col-md-12" id="btechFields" style="display: none;">
+				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 12px;">
+					<h5 style="color: #002768; font-weight: 600; font-size: 16px; margin-bottom: 15px; font-family: 'Afacad Flux', sans-serif;">B.Tech Details</h5>
+					<div class="row g-3">
+						<div class="col-md-4">
+							<span class="wpcf7-form-control-wrap" data-name="edu-btech-course">
+								<select class="wpcf7-form-control wpcf7-select form-control" id="eduBtechCourse" name="edu-btech-course" aria-invalid="false" style="background-color: #ffffff !important; height: 50px !important;">
+									<option value="">Select Branch</option>
+									<option value="CSE">CSE</option>
+									<option value="ECE">ECE</option>
+									<option value="EEE">EEE</option>
+									<option value="Civil">Civil</option>
+									<option value="Mechanical">Mechanical</option>
+									<option value="Others">Others</option>
+								</select>
+							</span>
+						</div>
+						<div class="col-md-4" id="eduBtechCourseOthersContainer" style="display: none;">
+							<span class="wpcf7-form-control-wrap" data-name="edu-btech-course-others">
+								<input class="wpcf7-form-control wpcf7-text form-control" id="eduBtechCourseOthers" placeholder="Specify Branch" type="text" name="edu-btech-course-others" style="background-color: #ffffff !important; height: 50px !important; font-size: 14px !important;">
+							</span>
+						</div>
+						<div class="col-md-4">
+							<span class="wpcf7-form-control-wrap" data-name="edu-btech-cgpa">
+								<input class="wpcf7-form-control wpcf7-text form-control" id="eduBtechCgpa" placeholder="CGPA" type="text" name="edu-btech-cgpa" style="background-color: #ffffff !important; height: 50px !important; font-size: 14px !important;">
+							</span>
+						</div>
+						<div class="col-md-4" id="eduBtechYearContainer">
+							<span class="wpcf7-form-control-wrap" data-name="edu-btech-year">
+								<select class="wpcf7-form-control wpcf7-select form-control" id="eduBtechYear" name="edu-btech-year" aria-invalid="false" style="background-color: #ffffff !important; height: 50px !important;">
+									<option value="">Year of Passing</option>
+									<option value="2031">2031</option>
+									<option value="2030">2030</option>
+									<option value="2029">2029</option>
+									<option value="2028">2028</option>
+									<option value="2027">2027</option>
+									<option value="2026">2026</option>
+									<option value="2025">2025</option>
+									<option value="2024">2024</option>
+									<option value="2023">2023</option>
+									<option value="2022">2022</option>
+									<option value="2021">2021</option>
+									<option value="2020">2020</option>
+									<option value="2019">2019</option>
+									<option value="2018">2018</option>
+									<option value="2017">2017</option>
+									<option value="2016">2016</option>
+									<option value="2015">2015</option>
+									<option value="2014">2014</option>
+									<option value="2013">2013</option>
+									<option value="2012">2012</option>
+									<option value="2011">2011</option>
+									<option value="2010">2010</option>
+									<option value="2009">2009</option>
+									<option value="2008">2008</option>
+									<option value="2007">2007</option>
+									<option value="2006">2006</option>
+									<option value="2005">2005</option>
+								</select>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="form-group col-md-4 mb-4">
 		<p><span class="wpcf7-form-control-wrap" data-name="country">
 			<select class="wpcf7-form-control wpcf7-select form-control" id="country" name="country" aria-invalid="false">
@@ -927,6 +1303,69 @@ document.addEventListener("DOMContentLoaded", function() {
     if (document.getElementById("program")) makeSelectCustom("program");
     if (document.getElementById("budget")) makeSelectCustom("budget");
 
+    // Convert new education dropdowns to custom selects
+    if (document.getElementById("edu10thYear")) makeSelectCustom("edu10thYear");
+    if (document.getElementById("eduInterCourse")) makeSelectCustom("eduInterCourse");
+    if (document.getElementById("eduInterYear")) makeSelectCustom("eduInterYear");
+    if (document.getElementById("eduDiplomaCourse")) makeSelectCustom("eduDiplomaCourse");
+    if (document.getElementById("eduDiplomaYear")) makeSelectCustom("eduDiplomaYear");
+    if (document.getElementById("eduDegreeCourse")) makeSelectCustom("eduDegreeCourse");
+    if (document.getElementById("eduDegreeYear")) makeSelectCustom("eduDegreeYear");
+    if (document.getElementById("eduBtechCourse")) makeSelectCustom("eduBtechCourse");
+    if (document.getElementById("eduBtechYear")) makeSelectCustom("eduBtechYear");
+
+    // Setup pathway toggles logic
+    setupPathwayToggle("btnPathwayInter", "btnPathwayDiploma", "interFields", "diplomaFields", "post10thSelection", "Intermediate", "Diploma");
+    setupPathwayToggle("btnPathwayDegree", "btnPathwayBtech", "degreeFields", "btechFields", "higherEdSelection", "Degree", "B.Tech");
+
+    // Setup "Others" course visibility toggling
+    setupOthersToggle("eduInterCourse", "eduInterCourseOthersContainer");
+    setupOthersToggle("eduDiplomaCourse", "eduDiplomaCourseOthersContainer");
+    setupOthersToggle("eduDegreeCourse", "eduDegreeCourseOthersContainer");
+    setupOthersToggle("eduBtechCourse", "eduBtechCourseOthersContainer");
+
+    function setupPathwayToggle(btn1Id, btn2Id, fields1Id, fields2Id, hiddenInputId, val1, val2) {
+        const btn1 = document.getElementById(btn1Id);
+        const btn2 = document.getElementById(btn2Id);
+        const fields1 = document.getElementById(fields1Id);
+        const fields2 = document.getElementById(fields2Id);
+        const hiddenInput = document.getElementById(hiddenInputId);
+
+        if (!btn1 || !btn2 || !fields1 || !fields2 || !hiddenInput) return;
+
+        btn1.addEventListener("click", () => {
+            btn1.classList.add("active");
+            btn2.classList.remove("active");
+            fields1.style.display = "block";
+            fields2.style.display = "none";
+            hiddenInput.value = val1;
+        });
+
+        btn2.addEventListener("click", () => {
+            btn2.classList.add("active");
+            btn1.classList.remove("active");
+            fields2.style.display = "block";
+            fields1.style.display = "none";
+            hiddenInput.value = val2;
+        });
+    }
+
+    function setupOthersToggle(selectId, othersContainerId) {
+        const selectEl = document.getElementById(selectId);
+        const container = document.getElementById(othersContainerId);
+        if (!selectEl || !container) return;
+
+        selectEl.addEventListener("change", () => {
+            if (selectEl.value === "Others") {
+                container.style.display = "block";
+            } else {
+                container.style.display = "none";
+                const textInput = container.querySelector("input");
+                if (textInput) textInput.value = ""; // clear specifier
+            }
+        });
+    }
+
     if (contactForm) {
         contactForm.addEventListener("submit", function(e) {
             e.preventDefault();
@@ -939,8 +1378,50 @@ document.addEventListener("DOMContentLoaded", function() {
             const program = document.getElementById("program").value;
             const budget = document.getElementById("budget").value;
 
+            // Educational Qualifications
+            const edu10thPercent = document.getElementById("edu10thPercent").value.trim();
+            const edu10thYear = document.getElementById("edu10thYear").value;
+
+            // Post-10th selection
+            const post10thSelection = document.getElementById("post10thSelection").value;
+            let post10thDetails = "";
+            if (post10thSelection === "Intermediate") {
+                const course = document.getElementById("eduInterCourse").value;
+                const specifyCourse = document.getElementById("eduInterCourseOthers").value.trim();
+                const actualCourse = course === "Others" ? (specifyCourse || "Others") : (course || "Not specified");
+                const percent = document.getElementById("eduInterPercent").value.trim();
+                const year = document.getElementById("eduInterYear").value;
+                post10thDetails = `Intermediate - Course: ${actualCourse}, Percentage: ${percent || "Not specified"}, Passing Year: ${year || "Not specified"}`;
+            } else {
+                const course = document.getElementById("eduDiplomaCourse").value;
+                const specifyCourse = document.getElementById("eduDiplomaCourseOthers").value.trim();
+                const actualCourse = course === "Others" ? (specifyCourse || "Others") : (course || "Not specified");
+                const percent = document.getElementById("eduDiplomaPercent").value.trim();
+                const year = document.getElementById("eduDiplomaYear").value;
+                post10thDetails = `Diploma - Branch: ${actualCourse}, Percentage: ${percent || "Not specified"}, Passing Year: ${year || "Not specified"}`;
+            }
+
+            // Higher Ed selection
+            const higherEdSelection = document.getElementById("higherEdSelection").value;
+            let higherEdDetails = "";
+            if (higherEdSelection === "Degree") {
+                const course = document.getElementById("eduDegreeCourse").value;
+                const specifyCourse = document.getElementById("eduDegreeCourseOthers").value.trim();
+                const actualCourse = course === "Others" ? (specifyCourse || "Others") : (course || "Not specified");
+                const percent = document.getElementById("eduDegreeCgpa").value.trim();
+                const year = document.getElementById("eduDegreeYear").value;
+                higherEdDetails = `Degree - Course: ${actualCourse}, CGPA: ${percent || "Not specified"}, Passing Year: ${year || "Not specified"}`;
+            } else {
+                const course = document.getElementById("eduBtechCourse").value;
+                const specifyCourse = document.getElementById("eduBtechCourseOthers").value.trim();
+                const actualCourse = course === "Others" ? (specifyCourse || "Others") : (course || "Not specified");
+                const percent = document.getElementById("eduBtechCgpa").value.trim();
+                const year = document.getElementById("eduBtechYear").value;
+                higherEdDetails = `B.Tech - Branch: ${actualCourse}, CGPA: ${percent || "Not specified"}, Passing Year: ${year || "Not specified"}`;
+            }
+
             if (!name || !email || !phone) {
-                responseOutput.className = "wpcf7-response-output";
+                responseOutput.className = "wpcf7-response-output small-text";
                 responseOutput.style.color = "#cf2e2e"; // Vivid Red
                 responseOutput.style.borderColor = "#cf2e2e";
                 responseOutput.style.backgroundColor = "rgba(207, 46, 46, 0.05)";
@@ -961,6 +1442,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 country: country || "Not specified",
                 program: program || "Not specified",
                 budget: budget || "Not specified",
+                "10th Education": `Percentage: ${edu10thPercent || "Not specified"}, Passing Year: ${edu10thYear || "Not specified"}`,
+                "Post-10th Pathway": post10thDetails,
+                "Higher Education": higherEdDetails,
                 message: message || "No message provided",
                 subject: "New Edu2Excel Inquiry from " + name
             };
@@ -1004,9 +1488,26 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
 
-        // Reset the custom select trigger text when form is reset
+        // Reset custom triggers and dropdown elements when form is reset
         contactForm.addEventListener("reset", function() {
             setTimeout(() => {
+                // Reset custom toggles style and state
+                const btnInter = document.getElementById("btnPathwayInter");
+                const btnDegree = document.getElementById("btnPathwayDegree");
+                if (btnInter) btnInter.click();
+                if (btnDegree) btnDegree.click();
+                
+                // Hide specify course containers
+                const specInter = document.getElementById("eduInterCourseOthersContainer");
+                const specDiploma = document.getElementById("eduDiplomaCourseOthersContainer");
+                const specDegree = document.getElementById("eduDegreeCourseOthersContainer");
+                const specBtech = document.getElementById("eduBtechCourseOthersContainer");
+
+                if (specInter) specInter.style.display = "none";
+                if (specDiploma) specDiploma.style.display = "none";
+                if (specDegree) specDegree.style.display = "none";
+                if (specBtech) specBtech.style.display = "none";
+
                 document.querySelectorAll(".custom-select-container").forEach(container => {
                     const originalSelect = container.previousSibling;
                     const triggerSpan = container.querySelector(".custom-select-trigger span");
