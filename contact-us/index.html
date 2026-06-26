@@ -137,7 +137,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 					font-size: 16px !important;
 					font-weight: 500 !important;
 					color: #002768 !important;
-					background-color: #EFF4FA99 !important;
+					background-color: #eff4fa55 !important;
 					border: 1.5px solid transparent !important;
 					border-radius: 8px !important;
 					height: 60px !important;
@@ -242,20 +242,53 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 					transition: all 0.3s ease-in-out !important;
 				}
 
-				/* Pathway Segmented Control Toggles */
-				.pathway-btn {
+				/* Pathway Segmented Control Toggles with Sliding Transition */
+				.pathway-toggle-container {
+					position: relative !important;
+					display: flex !important;
 					background-color: #EFF4FA99 !important;
-					color: #002768 !important;
 					border: 1.5px solid #EFF4FA !important;
+					height: 50px !important;
+					width: 100% !important;
+					padding: 0 !important;
+					overflow: hidden !important;
 				}
-				.pathway-btn:hover {
-					background-color: #EFF4FA !important;
+				.pathway-slider {
+					position: absolute !important;
+					top: 0 !important;
+					left: 0 !important;
+					width: 50% !important;
+					height: 100% !important;
+					background-color: #BE0B32 !important;
+					transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+					z-index: 1 !important;
+				}
+				.pathway-btn {
+					flex: 1 !important;
+					height: 100% !important;
+					background: transparent !important;
+					border: none !important;
+					color: #002768 !important;
+					font-weight: 600 !important;
+					font-family: 'Afacad Flux', sans-serif !important;
+					cursor: pointer !important;
+					position: relative !important;
+					z-index: 2 !important;
+					transition: color 0.3s ease-in-out !important;
+					text-align: center !important;
+					display: flex !important;
+					align-items: center !important;
+					justify-content: center !important;
+					border-radius: 0px !important;
+					box-shadow: none !important;
+					margin: 0 !important;
+					padding: 0 !important;
 				}
 				.pathway-btn.active {
-					background-color: #BE0B32 !important;
 					color: #FFFFFF !important;
-					border-color: #BE0B32 !important;
-					box-shadow: 0 0 8px rgba(190, 11, 50, 0.15) !important;
+					background: transparent !important;
+					border: none !important;
+					box-shadow: none !important;
 				}
 
 				/* Education Qualification Section font-size and height consistency */
@@ -280,10 +313,23 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				#contactForm .edu-qualification-section .form-control:-moz-placeholder {
 					font-size: 14px !important;
 				}
-				.edu-qualification-section .custom-select-trigger {
+				#contactForm .edu-qualification-section .custom-select-trigger {
 					height: 50px !important;
 					font-size: 14px !important;
 					padding: 10px 15px !important;
+					background-color: #ffffff !important;
+					border: 1.5px solid transparent !important;
+				}
+
+				/* Force perfect rectangle shape on all form controls, custom selects, pathway buttons, and container cards */
+				#contactForm .form-control,
+				#contactForm .custom-select-trigger,
+				#contactForm .custom-select-options,
+				#contactForm .pathway-btn,
+				#contactForm .wpcf7-response-output,
+				#contactForm #msgSubmit,
+				#contactForm .edu-qualification-section .col-md-12 > div {
+					border-radius: 0px !important;
 				}
 			</style>
 						<meta name="theme-color" content="#FFFFFF">
@@ -689,7 +735,7 @@ Saturday,  8 AM - 4 PM</p>
 		<div class="row g-3">
 			<!-- 10th Standard Card (Single Row, 2 Columns with Year Dropdown) -->
 			<div class="col-md-12">
-				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 12px;">
+				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 0px;">
 					<h5 style="color: #002768; font-weight: 600; font-size: 16px; margin-bottom: 15px; font-family: 'Afacad Flux', sans-serif;">10th Standard</h5>
 					<div class="row g-3">
 						<div class="col-md-6">
@@ -737,16 +783,17 @@ Saturday,  8 AM - 4 PM</p>
 
 			<!-- Post-10th Selection (Intermediate vs Diploma Toggle) -->
 			<div class="col-md-12">
-				<div class="pathway-toggle-container" style="display: flex; gap: 10px; margin-bottom: 5px;">
-					<button type="button" class="pathway-btn active" id="btnPathwayInter" style="flex: 1; height: 50px; border-radius: 8px; font-weight: 600; font-family: 'Afacad Flux', sans-serif; cursor: pointer; transition: all 0.3s;">Intermediate</button>
-					<button type="button" class="pathway-btn" id="btnPathwayDiploma" style="flex: 1; height: 50px; border-radius: 8px; font-weight: 600; font-family: 'Afacad Flux', sans-serif; cursor: pointer; transition: all 0.3s;">Diploma</button>
+				<div class="pathway-toggle-container" id="post10thToggleContainer">
+					<div class="pathway-slider" id="post10thSlider"></div>
+					<button type="button" class="pathway-btn active" id="btnPathwayInter">Intermediate</button>
+					<button type="button" class="pathway-btn" id="btnPathwayDiploma">Diploma</button>
 				</div>
 				<input type="hidden" id="post10thSelection" value="Intermediate">
 			</div>
 
 			<!-- Intermediate Card (shown by default) -->
 			<div class="col-md-12" id="interFields">
-				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 12px;">
+				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 0px;">
 					<h5 style="color: #002768; font-weight: 600; font-size: 16px; margin-bottom: 15px; font-family: 'Afacad Flux', sans-serif;">Intermediate Details</h5>
 					<div class="row g-3">
 						<div class="col-md-4">
@@ -811,7 +858,7 @@ Saturday,  8 AM - 4 PM</p>
 
 			<!-- Diploma Card (hidden by default) -->
 			<div class="col-md-12" id="diplomaFields" style="display: none;">
-				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 12px;">
+				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 0px;">
 					<h5 style="color: #002768; font-weight: 600; font-size: 16px; margin-bottom: 15px; font-family: 'Afacad Flux', sans-serif;">Diploma Details</h5>
 					<div class="row g-3">
 						<div class="col-md-4">
@@ -876,16 +923,17 @@ Saturday,  8 AM - 4 PM</p>
 
 			<!-- Higher Ed Selection (Degree vs B.Tech Toggle) -->
 			<div class="col-md-12">
-				<div class="pathway-toggle-container" style="display: flex; gap: 10px; margin-bottom: 5px;">
-					<button type="button" class="pathway-btn active" id="btnPathwayDegree" style="flex: 1; height: 50px; border-radius: 8px; font-weight: 600; font-family: 'Afacad Flux', sans-serif; cursor: pointer; transition: all 0.3s;">Degree</button>
-					<button type="button" class="pathway-btn" id="btnPathwayBtech" style="flex: 1; height: 50px; border-radius: 8px; font-weight: 600; font-family: 'Afacad Flux', sans-serif; cursor: pointer; transition: all 0.3s;">B.Tech</button>
+				<div class="pathway-toggle-container" id="higherEdToggleContainer">
+					<div class="pathway-slider" id="higherEdSlider"></div>
+					<button type="button" class="pathway-btn active" id="btnPathwayDegree">Degree</button>
+					<button type="button" class="pathway-btn" id="btnPathwayBtech">B.Tech</button>
 				</div>
 				<input type="hidden" id="higherEdSelection" value="Degree">
 			</div>
 
 			<!-- Degree Card (shown by default) -->
 			<div class="col-md-12" id="degreeFields">
-				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 12px;">
+				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 0px;">
 					<h5 style="color: #002768; font-weight: 600; font-size: 16px; margin-bottom: 15px; font-family: 'Afacad Flux', sans-serif;">Degree Details</h5>
 					<div class="row g-3">
 						<div class="col-md-4">
@@ -950,7 +998,7 @@ Saturday,  8 AM - 4 PM</p>
 
 			<!-- B.Tech Card (hidden by default) -->
 			<div class="col-md-12" id="btechFields" style="display: none;">
-				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 12px;">
+				<div style="background-color: #EFF4FA99; border: 1.5px solid #EFF4FA; padding: 20px; border-radius: 0px;">
 					<h5 style="color: #002768; font-weight: 600; font-size: 16px; margin-bottom: 15px; font-family: 'Afacad Flux', sans-serif;">B.Tech Details</h5>
 					<div class="row g-3">
 						<div class="col-md-4">
@@ -1315,8 +1363,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (document.getElementById("eduBtechYear")) makeSelectCustom("eduBtechYear");
 
     // Setup pathway toggles logic
-    setupPathwayToggle("btnPathwayInter", "btnPathwayDiploma", "interFields", "diplomaFields", "post10thSelection", "Intermediate", "Diploma");
-    setupPathwayToggle("btnPathwayDegree", "btnPathwayBtech", "degreeFields", "btechFields", "higherEdSelection", "Degree", "B.Tech");
+    setupPathwayToggle("btnPathwayInter", "btnPathwayDiploma", "interFields", "diplomaFields", "post10thSelection", "Intermediate", "Diploma", "post10thSlider");
+    setupPathwayToggle("btnPathwayDegree", "btnPathwayBtech", "degreeFields", "btechFields", "higherEdSelection", "Degree", "B.Tech", "higherEdSlider");
 
     // Setup "Others" course visibility toggling
     setupOthersToggle("eduInterCourse", "eduInterCourseOthersContainer");
@@ -1324,12 +1372,13 @@ document.addEventListener("DOMContentLoaded", function() {
     setupOthersToggle("eduDegreeCourse", "eduDegreeCourseOthersContainer");
     setupOthersToggle("eduBtechCourse", "eduBtechCourseOthersContainer");
 
-    function setupPathwayToggle(btn1Id, btn2Id, fields1Id, fields2Id, hiddenInputId, val1, val2) {
+    function setupPathwayToggle(btn1Id, btn2Id, fields1Id, fields2Id, hiddenInputId, val1, val2, sliderId) {
         const btn1 = document.getElementById(btn1Id);
         const btn2 = document.getElementById(btn2Id);
         const fields1 = document.getElementById(fields1Id);
         const fields2 = document.getElementById(fields2Id);
         const hiddenInput = document.getElementById(hiddenInputId);
+        const slider = document.getElementById(sliderId);
 
         if (!btn1 || !btn2 || !fields1 || !fields2 || !hiddenInput) return;
 
@@ -1339,6 +1388,7 @@ document.addEventListener("DOMContentLoaded", function() {
             fields1.style.display = "block";
             fields2.style.display = "none";
             hiddenInput.value = val1;
+            if (slider) slider.style.transform = "translateX(0%)";
         });
 
         btn2.addEventListener("click", () => {
@@ -1347,6 +1397,7 @@ document.addEventListener("DOMContentLoaded", function() {
             fields2.style.display = "block";
             fields1.style.display = "none";
             hiddenInput.value = val2;
+            if (slider) slider.style.transform = "translateX(100%)";
         });
     }
 
