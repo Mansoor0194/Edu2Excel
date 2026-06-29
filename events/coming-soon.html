@@ -1228,7 +1228,40 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				<h2 style="font-family: var(--e-global-typography-primary-font-family), Sans-serif !important; color: var(--e-global-color-primary, #002768); font-size: 32px; font-weight: 800; margin: 0;">Upcoming Admission Drives & Events</h2>
 			</div>
 			
-			<div class="events-timeline-container" style="display: flex; gap: 20px; overflow-x: auto; padding: 15px 5px; scrollbar-width: thin; -webkit-overflow-scrolling: touch;">
+			
+			<!-- Navigation styles for Timeline -->
+			<style>
+				.timeline-scroll-btn:hover {
+					background-color: #BE0B32 !important;
+					color: #ffffff !important;
+					border-color: #BE0B32 !important;
+					box-shadow: 0 8px 25px rgba(190, 11, 50, 0.25) !important;
+					transform: translateY(-50%) scale(1.08) !important;
+				}
+				.timeline-scroll-btn:active {
+					transform: translateY(-50%) scale(0.95) !important;
+				}
+				.events-timeline-container::-webkit-scrollbar {
+					display: none !important;
+				}
+				@media (max-width: 768px) {
+					.timeline-scroll-btn {
+						display: none !important;
+					}
+				}
+			</style>
+
+			<div class="events-timeline-outer-wrapper" style="position: relative;">
+				<!-- Left Arrow Circle Button -->
+				<button type="button" class="timeline-scroll-btn btn-left" style="position: absolute; left: -25px; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: #ffffff; border: 1px solid #eef2f6; box-shadow: 0 4px 15px rgba(0,39,104,0.08); display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); color: #002768; outline: none;">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+				</button>
+
+				<!-- Right Arrow Circle Button -->
+				<button type="button" class="timeline-scroll-btn btn-right" style="position: absolute; right: -25px; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: #ffffff; border: 1px solid #eef2f6; box-shadow: 0 4px 15px rgba(0,39,104,0.08); display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); color: #002768; outline: none;">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+				</button>
+<div class="events-timeline-container" id="eventsTimelineContainer" style="display: flex; gap: 20px; overflow-x: auto; padding: 15px 5px; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch;">
 				
 				<!-- Card 1: Active Event -->
 				<a href="index.html#register" class="timeline-event-card active" style="flex: 0 0 280px; background: #ffffff; border: 2px solid #BE0B32; border-radius: 0px; padding: 25px 20px; text-decoration: none; box-shadow: 0 10px 25px rgba(190, 11, 50, 0.08); display: flex; flex-direction: column; justify-content: space-between;">
@@ -1333,6 +1366,25 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				</a>
 
 			</div>
+			</div>
+
+			<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				const container = document.getElementById("eventsTimelineContainer");
+				const btnLeft = document.querySelector(".timeline-scroll-btn.btn-left");
+				const btnRight = document.querySelector(".timeline-scroll-btn.btn-right");
+				
+				if (container && btnLeft && btnRight) {
+					btnLeft.addEventListener("click", function() {
+						container.scrollBy({ left: -300, behavior: "smooth" });
+					});
+					btnRight.addEventListener("click", function() {
+						container.scrollBy({ left: 300, behavior: "smooth" });
+					});
+				}
+			});
+			</script>
+
 		</div>
 	</div>
 
