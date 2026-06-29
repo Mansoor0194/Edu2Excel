@@ -1501,7 +1501,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 subject: "New Edu2Excel Inquiry from " + name
             };
 
-            fetch("https://api.web3forms.com/submit", {
+            fetch("../submit_form.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -1510,8 +1510,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 body: JSON.stringify(formData)
             })
             .then(async (response) => {
-                let json = await response.json();
-                if (response.status == 200) {
+                let json = {};
+                try {
+                    json = await response.json();
+                } catch(e) {
+                    json = { message: "Server returned invalid response format. Please make sure this page is running on a PHP server." };
+                }
+                if (response.status == 200 && json.success) {
                     responseOutput.style.color = "#BE0B32"; // Same color as Send Message button
                     responseOutput.style.borderColor = "#BE0B32";
                     responseOutput.style.backgroundColor = "rgba(190, 11, 50, 0.05)";

@@ -1,0 +1,5 @@
+# Block direct public access to .env files
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
