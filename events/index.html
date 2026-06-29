@@ -1659,4 +1659,404 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 
 
+<!-- ===== SCROLL ANIMATION ENGINE (matches Home Page style) ===== -->
+<style>
+    /* ── Base hidden state for scroll-animated elements ── */
+    .ev-anim {
+        opacity: 0;
+        transform: translateY(36px);
+        transition: opacity 0.75s cubic-bezier(0.25, 1, 0.5, 1),
+                    transform 0.75s cubic-bezier(0.25, 1, 0.5, 1);
+        will-change: opacity, transform;
+    }
+    .ev-anim.ev-from-left {
+        transform: translateX(-40px);
+    }
+    .ev-anim.ev-from-right {
+        transform: translateX(40px);
+    }
+    .ev-anim.ev-scale {
+        transform: translateY(24px) scale(0.96);
+        transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+                    transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* ── Visible (animated-in) state ── */
+    .ev-anim.ev-visible {
+        opacity: 1;
+        transform: translateY(0) translateX(0) scale(1);
+    }
+
+    /* ── Stagger delays for card grids ── */
+    .ev-anim.ev-delay-1 { transition-delay: 0.10s; }
+    .ev-anim.ev-delay-2 { transition-delay: 0.20s; }
+    .ev-anim.ev-delay-3 { transition-delay: 0.30s; }
+    .ev-anim.ev-delay-4 { transition-delay: 0.40s; }
+    .ev-anim.ev-delay-5 { transition-delay: 0.50s; }
+    .ev-anim.ev-delay-6 { transition-delay: 0.60s; }
+
+    /* ── Override the old animate-fade-in-up (was always-on) ── */
+    .animate-fade-in-up {
+        animation: none !important;
+        opacity: 1 !important;
+    }
+
+    /* ── Image wrapper enhancement: subtle initial state ── */
+    .events-image-anime.ev-anim {
+        transform: translateY(28px) scale(0.97);
+        transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1),
+                    transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .events-image-anime.ev-anim.ev-visible {
+        transform: translateY(0) scale(1);
+    }
+
+    /* ── Hero section: animate immediately on load ── */
+    .events-hero-content .ev-anim {
+        transition-delay: 0.15s;
+    }
+
+    /* reduce motion respect */
+    @media (prefers-reduced-motion: reduce) {
+        .ev-anim {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+        }
+    }
+</style>
+
+<script>
+(function () {
+    'use strict';
+
+    /* ─── 1. Tag all animatable elements ─── */
+    function tagElements() {
+
+        /* Section headings — slide up */
+        document.querySelectorAll(
+            '.events-section-title h2, .events-section-title p, ' +
+            '.events-hero-content h1, .events-hero-content .lead, ' +
+            '.events-hero-content p, .events-hero-content .elementor-button-wrapper, ' +
+            '.events-hero-content .section-title, ' +
+            'h1.entry-title, .events-section > .container > .row > [class*="col"] > h2, ' +
+            '.events-section > .container > .row > [class*="col"] > .section-title, ' +
+            '.events-section > .container > .row > [class*="col"] > p'
+        ).forEach(function (el) {
+            el.classList.add('ev-anim');
+        });
+
+        /* All images inside .events-image-anime — scale + fade */
+        document.querySelectorAll('.events-image-anime').forEach(function (el) {
+            el.classList.add('ev-anim', 'ev-scale');
+        });
+
+        /* Cards — staggered fade up */
+        document.querySelectorAll(
+            '.events-metric-card, .events-grid-card, .events-checklist-card, .events-course-card'
+        ).forEach(function (el, i) {
+            var delay = (i % 4) + 1; // cycles 1–4
+            el.classList.add('ev-anim', 'ev-delay-' + delay);
+        });
+
+        /* Section sub-headings (h3 labels like "BUDAPEST CAMPUS") */
+        document.querySelectorAll('.elementor-heading-title').forEach(function (el) {
+            if (!el.classList.contains('ev-anim')) {
+                el.classList.add('ev-anim');
+            }
+        });
+
+        /* Course card body text */
+        document.querySelectorAll('.events-course-body h3, .events-course-body p, .events-course-list').forEach(function (el) {
+            el.classList.add('ev-anim');
+        });
+
+        /* Registration form */
+        document.querySelectorAll('.events-registration-wrapper').forEach(function (el) {
+            el.classList.add('ev-anim', 'ev-scale');
+        });
+
+        /* Hero banner image */
+        document.querySelectorAll('.events-hero img').forEach(function (el) {
+            el.classList.add('ev-anim', 'ev-scale');
+        });
+
+        /* Page header h1 */
+        document.querySelectorAll('.page-header-box h1, .page-header-box .breadcrumb-trail').forEach(function (el) {
+            el.classList.add('ev-anim');
+        });
+    }
+
+    /* ─── 2. Intersection Observer ─── */
+    function startObserver() {
+        if (!('IntersectionObserver' in window)) {
+            // Fallback: show everything immediately
+            document.querySelectorAll('.ev-anim').forEach(function (el) {
+                el.classList.add('ev-visible');
+            });
+            return;
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('ev-visible');
+                    observer.unobserve(entry.target); // animate only once
+                }
+            });
+        }, {
+            threshold: 0.12,        // 12% visible triggers animation
+            rootMargin: '0px 0px -40px 0px'  // slight bottom offset
+        });
+
+        document.querySelectorAll('.ev-anim').forEach(function (el) {
+            observer.observe(el);
+        });
+
+        /* Hero content: trigger immediately if already in viewport */
+        document.querySelectorAll('.events-hero-content .ev-anim').forEach(function (el) {
+            observer.observe(el);
+        });
+    }
+
+    /* ─── 3. GSAP ScrollTrigger enhancement (for smoother parallax on images) ─── */
+    function gsapEnhance() {
+        try {
+            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+            gsap.registerPlugin(ScrollTrigger);
+
+            /* Subtle parallax on hero image */
+            gsap.utils.toArray('.events-hero img').forEach(function (img) {
+                gsap.to(img, {
+                    y: 40,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: img.closest('.events-hero'),
+                        start: 'top top',
+                        end: 'bottom top',
+                        scrub: true
+                    }
+                });
+            });
+
+            /* Subtle parallax on section images */
+            gsap.utils.toArray('.events-image-anime img').forEach(function (img) {
+                gsap.to(img, {
+                    y: 20,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: img.closest('.events-image-anime'),
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: 0.5
+                    }
+                });
+            });
+        } catch (e) {
+            // GSAP not available, IntersectionObserver already handling animations
+        }
+    }
+
+    /* ─── 4. Init ─── */
+    function init() {
+        tagElements();
+        startObserver();
+        // Run GSAP after a brief delay to ensure it's loaded
+        setTimeout(gsapEnhance, 200);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>
+<!-- ===== END SCROLL ANIMATION ENGINE ===== -->
+
+<!-- ===== TYPEWRITER TEXT-REVEAL ANIMATION ===== -->
+<style>
+    /* Each character wrapper */
+    .ev-char-wrap {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: bottom;
+        line-height: inherit;
+    }
+    /* The character itself — starts translated left + invisible */
+    .ev-char {
+        display: inline-block;
+        opacity: 0;
+        transform: translateX(-18px);
+        transition: opacity 0.38s ease,
+                    transform 0.38s cubic-bezier(0.25, 1, 0.5, 1);
+        will-change: opacity, transform;
+    }
+    /* Space characters */
+    .ev-char.ev-space {
+        width: 0.3em;
+    }
+    /* Revealed state */
+    .ev-char.ev-char-in {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Blinking cursor on hero h1 */
+    .ev-cursor {
+        display: inline-block;
+        width: 3px;
+        height: 0.82em;
+        background: var(--e-global-color-accent, #BE0B32);
+        margin-left: 3px;
+        vertical-align: middle;
+        border-radius: 1px;
+        animation: ev-blink 0.75s step-end infinite;
+    }
+    @keyframes ev-blink {
+        0%, 100% { opacity: 1; }
+        50%       { opacity: 0; }
+    }
+
+    /* Reduce motion — skip animation entirely */
+    @media (prefers-reduced-motion: reduce) {
+        .ev-char {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+        }
+        .ev-cursor { display: none; }
+    }
+</style>
+
+<script>
+(function () {
+    'use strict';
+
+    /* ── Selectors to apply typewriter effect to ── */
+    var TARGETS = [
+        'h1',
+        'h2',
+        '.elementor-heading-title',
+        '.events-section-title h2',
+        '.page-header-box h1'
+    ].join(',');
+
+    /* ── Split element text into per-character spans ── */
+    function splitText(el) {
+        if (el.dataset.twSplit) return; // already split
+        el.dataset.twSplit = '1';
+
+        var raw = el.innerHTML;
+
+        /* Preserve inner HTML tags (spans, <br>, etc.) by only splitting
+           plain text nodes */
+        function walkNode(node) {
+            if (node.nodeType === 3) { // TEXT_NODE
+                var text = node.textContent;
+                var frag = document.createDocumentFragment();
+                for (var i = 0; i < text.length; i++) {
+                    var ch = text[i];
+                    var wrap = document.createElement('span');
+                    wrap.className = 'ev-char-wrap';
+                    var inner = document.createElement('span');
+                    inner.className = ch === ' ' ? 'ev-char ev-space' : 'ev-char';
+                    inner.textContent = ch === ' ' ? '\u00a0' : ch;
+                    wrap.appendChild(inner);
+                    frag.appendChild(wrap);
+                }
+                node.parentNode.replaceChild(frag, node);
+            } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
+                // Clone children list first to avoid live-list mutation issues
+                var children = Array.prototype.slice.call(node.childNodes);
+                children.forEach(walkNode);
+            }
+        }
+
+        walkNode(el);
+    }
+
+    /* ── Reveal chars left-to-right with stagger ── */
+    function revealChars(el, baseDelay) {
+        baseDelay = baseDelay || 0;
+        var chars = el.querySelectorAll('.ev-char');
+        var perCharDelay = 28; // ms between each character
+        chars.forEach(function (ch, i) {
+            setTimeout(function () {
+                ch.classList.add('ev-char-in');
+            }, baseDelay + i * perCharDelay);
+        });
+
+        /* Remove blinking cursor after typing finishes */
+        var cursor = el.querySelector('.ev-cursor');
+        if (cursor) {
+            var totalTime = baseDelay + chars.length * perCharDelay + 800;
+            setTimeout(function () {
+                cursor.style.animation = 'none';
+                cursor.style.opacity = '1';
+            }, totalTime);
+        }
+    }
+
+    /* ── Add blinking cursor to hero h1 only ── */
+    function addCursorToHero() {
+        var heroH1 = document.querySelector('.events-hero-content h1');
+        if (!heroH1) return;
+        var cursor = document.createElement('span');
+        cursor.className = 'ev-cursor';
+        cursor.setAttribute('aria-hidden', 'true');
+        heroH1.appendChild(cursor);
+    }
+
+    /* ── Intersection Observer to trigger on scroll ── */
+    function startTypeObserver() {
+        if (!('IntersectionObserver' in window)) {
+            /* Fallback: reveal all immediately */
+            document.querySelectorAll(TARGETS).forEach(function (el) {
+                splitText(el);
+                revealChars(el, 0);
+            });
+            return;
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    revealChars(entry.target, 0);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -30px 0px'
+        });
+
+        document.querySelectorAll(TARGETS).forEach(function (el) {
+            splitText(el);
+            observer.observe(el);
+        });
+
+        /* Hero h1 — trigger after a short page-load delay (already in viewport) */
+        var heroH1 = document.querySelector('.events-hero-content h1');
+        if (heroH1) {
+            setTimeout(function () { revealChars(heroH1, 0); }, 350);
+            observer.unobserve(heroH1); // don't double-fire
+        }
+    }
+
+    /* ── Init ── */
+    function init() {
+        addCursorToHero();
+        startTypeObserver();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>
+<!-- ===== END TYPEWRITER TEXT-REVEAL ANIMATION ===== -->
+
 </body></html>

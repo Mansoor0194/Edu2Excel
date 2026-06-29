@@ -744,6 +744,182 @@
         </div>
     </div>
 
+    <!-- ===== EVENT SCROLLING BAR ===== -->
+    <style>
+        .edu-event-ticker {
+            width: 100%;
+            background: linear-gradient(90deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            border-bottom: 2px solid rgba(255, 180, 0, 0.35);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+        }
+        .edu-event-ticker-inner {
+            display: flex;
+            align-items: center;
+            height: 42px;
+        }
+        .edu-event-ticker-label {
+            flex-shrink: 0;
+            background: linear-gradient(135deg, #e8a000, #f5c518);
+            color: #0f0f1a;
+            font-weight: 800;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0 18px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            white-space: nowrap;
+            clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+            padding-right: 28px;
+        }
+        .edu-event-ticker-label svg {
+            flex-shrink: 0;
+        }
+        .edu-event-ticker-track {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .edu-event-ticker-track::before,
+        .edu-event-ticker-track::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .edu-event-ticker-track::before {
+            left: 0;
+            background: linear-gradient(to right, #16213e, transparent);
+        }
+        .edu-event-ticker-track::after {
+            right: 0;
+            background: linear-gradient(to left, #16213e, transparent);
+        }
+        .edu-event-ticker-scroll {
+            display: flex;
+            align-items: center;
+            animation: edu-ticker-scroll 30s linear infinite;
+            white-space: nowrap;
+        }
+        .edu-event-ticker-scroll:hover {
+            animation-play-state: paused;
+        }
+        @keyframes edu-ticker-scroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .edu-event-ticker-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0 28px;
+            color: #d0d8e8;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            font-family: 'Afacad Flux', sans-serif;
+            transition: color 0.2s;
+        }
+        .edu-event-ticker-item a {
+            color: #f5c518;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 13px;
+            font-family: 'Afacad Flux', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s, gap 0.2s;
+        }
+        .edu-event-ticker-item a:hover {
+            color: #ffd966;
+            gap: 9px;
+        }
+        .edu-event-ticker-dot {
+            display: inline-block;
+            width: 3px;
+            height: 22px;
+            border-radius: 2px;
+            background: linear-gradient(180deg, #f5c518 0%, rgba(245, 197, 24, 0.4) 100%);
+            flex-shrink: 0;
+            margin: 0 10px;
+            align-self: center;
+        }
+        @media (max-width: 480px) {
+            .edu-event-ticker-label {
+                font-size: 9px;
+                padding: 0 12px 0 12px;
+                padding-right: 22px;
+                letter-spacing: 1px;
+            }
+            .edu-event-ticker-item {
+                font-size: 12px;
+            }
+        }
+    </style>
+    <div class="edu-event-ticker" role="marquee" aria-label="Upcoming Events">
+        <div class="edu-event-ticker-inner">
+            <div class="edu-event-ticker-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                Events
+            </div>
+            <div class="edu-event-ticker-track">
+                <div class="edu-event-ticker-scroll">
+                    <!-- First set -->
+                    <span class="edu-event-ticker-item">
+                        <span class="edu-event-ticker-dot"></span>
+                        Join us for our upcoming Study Abroad Seminar &mdash; expert guidance on top universities &amp; scholarships!
+                        &nbsp;&nbsp;<a href="./events/index.html">View All Events &rarr;</a>
+                    </span>
+                    <span class="edu-event-ticker-dot"></span>
+                    <span class="edu-event-ticker-item">
+                        <span class="edu-event-ticker-dot"></span>
+                        Free IELTS &amp; PTE Preparation Workshop &mdash; Book your seat now!
+                        &nbsp;&nbsp;<a href="./events/index.html">View All Events &rarr;</a>
+                    </span>
+                    <span class="edu-event-ticker-dot"></span>
+                    <span class="edu-event-ticker-item">
+                        <span class="edu-event-ticker-dot"></span>
+                        University Open Day &mdash; Meet representatives from UK, Canada, Australia &amp; Europe!
+                        &nbsp;&nbsp;<a href="./events/index.html">View All Events &rarr;</a>
+                    </span>
+                    <span class="edu-event-ticker-dot"></span>
+                    <!-- Duplicate set for seamless loop -->
+                    <span class="edu-event-ticker-item">
+                        <span class="edu-event-ticker-dot"></span>
+                        Join us for our upcoming Study Abroad Seminar &mdash; expert guidance on top universities &amp; scholarships!
+                        &nbsp;&nbsp;<a href="./events/index.html">View All Events &rarr;</a>
+                    </span>
+                    <span class="edu-event-ticker-dot"></span>
+                    <span class="edu-event-ticker-item">
+                        <span class="edu-event-ticker-dot"></span>
+                        Free IELTS &amp; PTE Preparation Workshop &mdash; Book your seat now!
+                        &nbsp;&nbsp;<a href="./events/index.html">View All Events &rarr;</a>
+                    </span>
+                    <span class="edu-event-ticker-dot"></span>
+                    <span class="edu-event-ticker-item">
+                        <span class="edu-event-ticker-dot"></span>
+                        University Open Day &mdash; Meet representatives from UK, Canada, Australia &amp; Europe!
+                        &nbsp;&nbsp;<a href="./events/index.html">View All Events &rarr;</a>
+                    </span>
+                    <span class="edu-event-ticker-dot"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===== END EVENT SCROLLING BAR ===== -->
+
     <div data-elementor-type="wp-page" data-elementor-id="11" class="elementor elementor-11">
         <div class="elementor-element elementor-element-0503487 e-flex e-con-boxed e-con e-parent" data-id="0503487" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div class="e-con-inner">
