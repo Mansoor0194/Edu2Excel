@@ -124,11 +124,11 @@
                     s = n.data("behavior"),
                     a = n.find("a, a *"),
                     l = e(t.target).is(a),
-                    r = o ? .is_external ? o.is_external : "_self";
-                if ("hover" === s || i === this) !l && o ? .url && ElementsKit_Helper.isValidURL(o.url) && window.open(o.url, r);
+                    r = o ?.is_external ? o.is_external : "_self";
+                if ("hover" === s || i === this) !l && o ?.url && ElementsKit_Helper.isValidURL(o.url) && window.open(o.url, r);
                 else {
                     if (!n.hasClass("item-opened")) return i = "", e(this).closest(".elementskit-image-accordion-wraper").find(".ekit-image-accordion-item").removeClass("item-opened"), void n.addClass("item-opened");
-                    if (n.hasClass("item-opened")) return void(!l && o ? .url && ElementsKit_Helper.isValidURL(o.url) && window.open(o.url, r))
+                    if (n.hasClass("item-opened")) return void(!l && o ?.url && ElementsKit_Helper.isValidURL(o.url) && window.open(o.url, r))
                 }
             }))
         },
@@ -198,7 +198,7 @@
                 i = t.find(".number-percentage"),
                 o = i.data("value"),
                 s = i.data("animation-duration") || 300;
-            ElementsKit_Helper ? .observeElement(t[0], (e => {
+            ElementsKit_Helper ?.observeElement(t[0], (e => {
                 i.animateNumbers(o, !0, s), n.animate({
                     width: o + "%"
                 }, s)
@@ -210,7 +210,7 @@
                 i = n.data("style"),
                 o = n.data("value"),
                 s = n.data("animation-duration");
-            ElementsKit_Helper ? .observeElement(t[0], (e => {
+            ElementsKit_Helper ?.observeElement(t[0], (e => {
                 "static" == i ? n.animateNumbers(o, !0, s) : new Odometer({
                     el: n[0],
                     value: 0,
@@ -325,12 +325,12 @@
             t.imagesLoaded((function() {
                 var e = {
                     orientation: t.hasClass("image-comparison-container-vertical") ? "vertical" : "horizontal",
-                    before_label: n ? .label_before,
-                    after_label: n ? .label_after,
-                    default_offset_pct: n ? .offset,
-                    no_overlay: n ? .overlay,
-                    move_slider_on_hover: n ? .move_slider_on_hover,
-                    click_to_move: n ? .click_to_move
+                    before_label: n ?.label_before,
+                    after_label: n ?.label_after,
+                    default_offset_pct: n ?.offset,
+                    no_overlay: n ?.overlay,
+                    move_slider_on_hover: n ?.move_slider_on_hover,
+                    click_to_move: n ?.click_to_move
                 };
                 t.twentytwenty(e)
             }))
@@ -344,7 +344,7 @@
                     trackColor: i.barbg || undefined,
                     gradientChart: !1
                 };
-            "gradient" === i ? .pie_color_style && (o = {
+            "gradient" === i ?.pie_color_style && (o = {
                 gradientChart: !0,
                 barColor: i.color || undefined,
                 gradientColor1: i.gradientcolor2 || undefined,
@@ -363,7 +363,7 @@
                 lineCap: "round",
                 gradientChart: !1
             }, o);
-            ElementsKit_Helper ? .observeElement(n[0], (e => {
+            ElementsKit_Helper ?.observeElement(n[0], (e => {
                 n.easyPieChart({
                     barColor: !0 === s.gradientChart ? function(e) {
                         var t = this.renderer.getCtx(),
@@ -457,7 +457,7 @@
                 i = t.find(".ekit_offcanvas-sidebar, .ekit_close-side-widget, .ekit-overlay"),
                 o = t.find(".ekit-sidebar-group").data("settings");
             i.on("click", (function(t) {
-                t.preventDefault(), n.toggleClass("ekit_isActive"), "yes" === o ? .disable_bodyscroll && (n.hasClass("ekit_isActive") ? e("body").css("overflow", "hidden") : e("body").css("overflow", ""))
+                t.preventDefault(), n.toggleClass("ekit_isActive"), "yes" === o ?.disable_bodyscroll && (n.hasClass("ekit_isActive") ? e("body").css("overflow", "hidden") : e("body").css("overflow", ""))
             }))
         },
         Back_To_Top: function(t) {

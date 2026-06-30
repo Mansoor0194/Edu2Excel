@@ -159,7 +159,7 @@
                 }))) throw new o(this)
         },
         d = function(t) {
-            if (!t.getAll(this.field).every((t => t instanceof File && this.accept ? .some((e => /^\.[a-z0-9]+$/i.test(e) ? t.name.toLowerCase().endsWith(e.toLowerCase()) : (t => {
+            if (!t.getAll(this.field).every((t => t instanceof File && this.accept ?.some((e => /^\.[a-z0-9]+$/i.test(e) ? t.name.toLowerCase().endsWith(e.toLowerCase()) : (t => {
                     const e = [],
                         i = t.match(/^(?<toplevel>[a-z]+)\/(?<sub>[*]|[a-z0-9.+-]+)$/i);
                     if (i) {
@@ -174,13 +174,13 @@
                 })(e).some((e => (e = "." + e.trim(), t.name.toLowerCase().endsWith(e.toLowerCase()))))))))) throw new o(this)
         },
         h = function(t) {
-            if (!t.getAll(this.field).map((t => t.trim())).filter((t => "" !== t)).every((t => this.accept ? .some((e => t === String(e)))))) throw new o(this)
+            if (!t.getAll(this.field).map((t => t.trim())).filter((t => "" !== t)).every((t => this.accept ?.some((e => t === String(e)))))) throw new o(this)
         },
         u = function(t) {
             if (!t.getAll(this.field).map((t => t.trim())).filter((t => "" !== t)).every((t => {
                     const e = 0 === (i = new Date(t).getDay()) ? 7 : i;
                     var i;
-                    return this.accept ? .some((t => e === parseInt(t)))
+                    return this.accept ?.some((t => e === parseInt(t)))
                 }))) throw new o(this)
         },
         w = function(t) {
